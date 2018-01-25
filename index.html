@@ -2,8 +2,27 @@
 <html lang="nb">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title> </title>
   </head>
   <body>
+    <div class="flex wrap-main">
+        <h3 class="flex">My Google Maps Demo</h3>
+        <div class="flex" id="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
+      </div>
   </body>
 </html>
