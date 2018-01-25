@@ -1,5 +1,5 @@
 function initMap() {
-  var kvarteret = {lat: 60.389730, lng: 5.322129};
+  var kvarteret = {lat: 60.389716, lng: 5.322079};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: kvarteret
