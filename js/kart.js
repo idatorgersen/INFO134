@@ -18,10 +18,9 @@ const hotspots = [
 ];
 
 function initMap() {
-  var kvarteret = {lat: 60.389716, lng: 5.322079};
-  var map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
-    center: kvarteret
+    center: getCenterCoordinates(hotspots)
   });
 
   for(i in hotspots) addMarker(hotspots[i], map);
@@ -47,4 +46,15 @@ function addMarker(spot, map) {
     if(this.getAnimation() !== null) this.setAnimation(null);
     else this.setAnimation(google.maps.Animation.BOUNCE);
   })*/
+}
+
+function getCenterCoordinates(coordinates) {
+  let lat = 0.0, lng = 0.0;
+  let ln = coordinates.length;
+  for(let i = 0; i < ln; i++) {
+    lat += coordinates[i].pos.lat;
+    lng += coordinates[i].pos.lng;
+  }
+
+  return {lat: lat / ln, lng: lng / ln};
 }
