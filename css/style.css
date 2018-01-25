@@ -5,6 +5,7 @@ html{
 body{
   padding: 0;
   margin: 0;
+  font-family: Helvetica;
 }
 
 .center {
@@ -14,6 +15,13 @@ body{
 	width: 85%;
 	padding:20px;
 }
+
+nav{
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
 #banner{
   width: 100%;
 }
@@ -21,4 +29,10 @@ body{
 #map {
   width: 100%;
   height: 400px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: blue;
+  padding-right: 30px;
 }
