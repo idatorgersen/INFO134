@@ -7,8 +7,29 @@
     <title> </title>
   </head>
   <body>
-    <form>
-
-    </form>
+    <header>
+      <nav class="center">
+          <a href="index.html">Hjem</a>
+          <a href="kart.html">Kart</a>
+          <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
+    <div class="center">
+      <h3 style="margin-bottom:0px;">Kontaktskjema</h3>
+      <hr />
+      <form name="kontakt" action="" method="post">
+        Hva gjelder det?<br />
+        <input type="radio" name="category" value="arrangement" />Arrangementer
+        <input type="radio" name="category" value="feil" />Feil på siden
+        <input type="radio" name="category" value="presse" />Presse
+        <input type="radio" name="category" value="annet" />Annet
+        <br />
+        Navn:<br />
+        <input type="text" name="name" /><br />
+        Melding:<br />
+        <textarea name="message" rows="10" cols="50" placeholder="Skriv her..."></textarea><br />
+        <input type="submit" value="Send inn" />
+      </form>
+    </div>
   </body>
 </html>
