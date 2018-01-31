@@ -55,3 +55,12 @@ a:link, a:visited {
 a:hover {
   color: black;
 }
+
+.subheader {
+  background-color: lightgrey;
+
+  height: 150px;
+
+  text-align: center;
+}
+
