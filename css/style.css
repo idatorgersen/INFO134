@@ -6,22 +6,35 @@ body{
   padding: 0;
   margin: 0;
   font-family: Helvetica;
+  font-size: 14px;
+}
+
+header {
+  background-color: white;
+}
+
+nav{
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+h2 {
+  font-family: "Times New Roman";
+  font-size: 25px;
+}
+
+p{
+  padding: 0 20px;
 }
 
 .center {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white;
-	width: 85%;
-	padding:20px;
-}
-header {
-  background-color: white;
-}
-nav{
-  text-align: right;
-  text-transform: uppercase;
-  font-size: 13px;
+	width: 80%;
+	padding:15px;
 }
 
 #banner{
@@ -36,7 +49,7 @@ nav{
 a:link, a:visited {
   text-decoration: none;
   color: blue;
-  padding-right: 30px;
+  margin-right: 20px;
 }
 
 a:hover {
