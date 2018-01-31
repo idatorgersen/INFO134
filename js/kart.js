@@ -1,4 +1,4 @@
-const hotspots = [
+const hotspots = [ // Sindre og Ida
   {
     name: "Det Akademiske Kvarter",
     pos: {lat: 60.389716, lng: 5.322079}
@@ -17,7 +17,7 @@ const hotspots = [
   }
 ];
 //Skal legge inn dynamisk endring av zoom her
-function initMap() {
+function initMap() { // Google
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: getCenterCoordinates(hotspots)
@@ -26,7 +26,7 @@ function initMap() {
   for(i in hotspots) addMarker(hotspots[i], map);
 }
 
-function addMarker(spot, map) {
+function addMarker(spot, map) { // Sindre
   let marker = new google.maps.Marker({
     position: spot.pos,
     title: spot.name,
@@ -48,7 +48,7 @@ function addMarker(spot, map) {
   })
 }
 
-function getCenterCoordinates(coordinates) {
+function getCenterCoordinates(coordinates) { // Sindre
   let lat = 0.0, lng = 0.0;
   let ln = coordinates.length;
   for(let i = 0; i < ln; i++) {
