@@ -42,10 +42,10 @@ function addMarker(spot, map) {
   });
 
   // Denne koden gjør at markers bouncer konstant etter onclick. Veldig unødvendig.
-  /*marker.addListener('click', function() {
+  marker.addListener('click', function() {
     if(this.getAnimation() !== null) this.setAnimation(null);
     else this.setAnimation(google.maps.Animation.BOUNCE);
-  })*/
+  })
 }
 
 function getCenterCoordinates(coordinates) {

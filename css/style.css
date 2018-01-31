@@ -1,5 +1,5 @@
 html{
-  background: #f9f9f9;
+  background: lightgrey;
 }
 
 body{
@@ -15,7 +15,9 @@ body{
 	width: 85%;
 	padding:20px;
 }
-
+header {
+  background-color: white;
+}
 nav{
   text-align: right;
   text-transform: uppercase;
@@ -35,4 +37,8 @@ a:link, a:visited {
   text-decoration: none;
   color: blue;
   padding-right: 30px;
+}
+
+a:hover {
+  color: black;
 }
