@@ -9,7 +9,7 @@ const hotspots = [
   },
   {
     name: "Studentsenteret",
-    pos: {lat: 60.387953, lng:5.323139}
+    pos: {lat: 60.386711, lng:5.323203}
   },
   {
     name: "SV-fakultetet",
