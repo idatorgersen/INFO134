@@ -19,8 +19,6 @@ nav{
   font-size: 13px;
 }
 
-
-
 #logo {
   color: white;
   font-family: "Times New Roman";
@@ -47,9 +45,8 @@ p{
 
 #main{
   width: 80%;
-    box-shadow: 5px 5px 30px grey;
+    box-shadow: 5px 5px 20px grey;
     background-color: white;
-
 }
 
 
