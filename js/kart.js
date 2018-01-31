@@ -16,7 +16,7 @@ const hotspots = [
     pos: {lat: 60.388549, lng:5.324381}
   }
 ];
-
+//Skal legge inn dynamisk endring av zoom her
 function initMap() {
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
