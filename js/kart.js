@@ -14,12 +14,45 @@ const hotspots = [ // Sindre og Ida
   {
     name: "SV-fakultetet",
     pos: {lat: 60.388549, lng:5.324381}
+  },
+  {
+    name: "Realfagsbygget",
+    pos: {lat: 60.384821, lng:5.328484}
+  },
+  {
+    name: "Det Juridiske Fakultet",
+    pos: {lat: 60.390328, lng:5.314803}
+  },
+  {
+    name: "Det Psykologiske Fakultet",
+    pos: {lat: 60.389968, lng:5.324309}
+  },
+  {
+    name: "Handelshøyskolen BI",
+    pos: {lat: 60.382151, lng:5.324450}
+  },
+  {
+    name: "Det Humanistiske Fakultet",
+    pos: {lat: 60.387578, lng:5.318017}
+  },
+  {
+    name: "Fakultet for kunst, musikk og design",
+    pos: {lat: 60.379152, lng:5.353126}
+  },
+  {
+    name: "Det medisinske fakultet",
+    pos: {lat: 60.372656, lng:5.360194}
+  },
+  {
+    name: "Hulen",
+    pos: {lat: 60.384854, lng:5.325547}
   }
+
 ];
 //Skal legge inn dynamisk endring av zoom her
 function initMap() { // Google
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
+    zoom: 14,
     center: getCenterCoordinates(hotspots)
   });
 
