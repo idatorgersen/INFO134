@@ -39,7 +39,10 @@ nav {
 
 .header-sub {
   background-color: #8f8f8f;
-  min-height: 250px;
+  min-height: 120px;
+
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
 
   justify-content: center;
   align-items: center;
