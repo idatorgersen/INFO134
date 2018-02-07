@@ -1,7 +1,7 @@
 /* Ida */
 
 html{
-  background: #d9d9d9;
+
 }
 
 body{
@@ -9,7 +9,16 @@ body{
   font-size: 14px;
 }
 
+.fill {
+  background-image: url("../img/high-res-landskap_0.jpg");
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-attachment: fixed;
+}
+
 .hat {
+  /*background: rgba(95,95,95,0.5)*/
   background-color: #5f5f5f;
 }
 
@@ -38,6 +47,7 @@ nav {
 }
 
 .header-sub {
+  /*background: rgba(143,143,143,0.3);*/
   background-color: #8f8f8f;
   min-height: 120px;
 
