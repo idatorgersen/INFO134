@@ -32,6 +32,7 @@ header {
 
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 #logo {
@@ -40,11 +41,18 @@ header {
   font-size: 20px;
 }
 
+
+/* Datamaskin */
 nav {
   width: 20%;
+  min-width: 250px;
 
   justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
 }
+
 
 .header-sub {
   /*background: rgba(143,143,143,0.3);*/
@@ -92,4 +100,36 @@ a:link, a:visited {
 
 nav>a:hover {
   color: black;
+}
+
+
+
+/* Nettbrett */
+@media all and (max-width: 800px){
+  nav {
+    justify-content: space-around;
+    min-height: 20px;
+    min-width: 250px;
+  }
+
+  header{
+    align-items: center;
+    flex-direction: column;
+    min-height: 50px;
+  }
+}
+
+/* Mobil */
+@media all and (max-width: 500px){
+  nav{
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav>a{
+    margin-top: 5px;
+  }
+  .center{
+    flex-direction: column;
+  }
 }
