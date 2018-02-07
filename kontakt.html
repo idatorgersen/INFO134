@@ -1,36 +1,49 @@
-<!DOCTYPE html> <!--- Sindre --->
+<!DOCTYPE html><!-- Sindre -->
 <html lang="nb">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/flex.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Studentassistenten</title>
   </head>
-  <body>
-    <header>
-      <nav class="center">
-          <div id="logo">Studentassistenten</div>
+  <body class="flex flex-column fill">
+    <div class="flex flex-column hat">
+      <header class="flex flex-row flex-wrap">
+        <div class="flex" id="logo">
+          <a href="index.html">Studentassistenten</a>
+        </div>
+        <nav class="flex flex-row">
           <a href="index.html">Hjem</a>
           <a href="kart.html">Kart</a>
           <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </header>
-    <div class="center" id="main">
-      <h3>Kontaktskjema</h3>
-      <hr />
-      <form name="kontakt" action="" method="post">
-        Hva gjelder det?<br />
-        <input type="radio" name="category" value="arrangement" />Arrangementer
-        <input type="radio" name="category" value="feil" />Feil på siden
-        <input type="radio" name="category" value="presse" />Presse
-        <input type="radio" name="category" value="annet" />Annet
-        <br />
-        Navn:<br />
-        <input type="text" name="name" /><br />
-        Melding:<br />
-        <textarea name="message" rows="10" cols="50" placeholder="Skriv her..."></textarea><br />
-        <input type="submit" value="Send inn" />
-      </form>
+        </nav>
+      </header>
+      <section class="flex header-sub">
+        <p id="page-title">Kontakt oss</p>
+      </section>
+    </div>
+    <div class="flex flex-column flex-wrap">
+      <div class="flex flex-column center">
+        <article class="flex flex-column">
+          <form name="kontakt" action="" method="post">
+            Hva gjelder det?<br />
+            <input type="radio" name="category" value="arrangement" />Arrangementer
+            <input type="radio" name="category" value="feil" />Feil på siden
+            <input type="radio" name="category" value="presse" />Presse
+            <input type="radio" name="category" value="annet" />Annet
+            <br />
+            Navn:<br />
+            <input type="text" name="name" /><br />
+            Melding:<br />
+            <textarea name="message" rows="10" cols="50" placeholder="Skriv her..."></textarea><br />
+            <input type="submit" value="Send inn" />
+          </form>
+        </article>
+        <footer class="flex">
+
+        </footer>
+      </div>
     </div>
   </body>
 </html>
