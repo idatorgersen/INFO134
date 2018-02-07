@@ -20,3 +20,10 @@ html, body {
 .flex-wrap {
   margin: 0 15%;
 }
+
+/* Nettbrett */
+@media all and (max-width: 800px){
+  .flex-wrap{
+    margin: 0;
+  }
+}
