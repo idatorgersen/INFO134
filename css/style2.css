@@ -38,6 +38,9 @@ nav {
 }
 
 .header-sub {
+  background-color: #8f8f8f;
+  min-height: 250px;
+
   justify-content: center;
   align-items: center;
 }
