@@ -126,10 +126,10 @@ nav>a:hover {
     flex-direction: column;
     width: 100%;
   }
-  nav>a{
+  nav>a {
     margin-top: 5px;
   }
-  .center{
+  .main {
     flex-direction: column;
   }
 }
