@@ -2,48 +2,68 @@
 <html lang="nb">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/flex.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="js/kart.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Studentassistenten</title>
   </head>
-  <body>
-    <header>
-      <nav class="center">
-          <div id="logo">Studentassistenten</div>
+  <body class="flex flex-column fill">
+    <div class="flex flex-column hat">
+      <header class="flex flex-wrap">
+        <div class="flex" id="logo">
+          <a href="index.html">Studentassistenten</a>
+        </div>
+        <nav class="flex">
           <a href="index.html">Hjem</a>
           <a href="kart.html">Kart</a>
           <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </header>
-    <div>
-      <div id="map"></div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
+        </nav>
+      </header>
+      <section class="flex header-sub">
+        <p id="page-title">Viktige Lokasjoner</p>
+      </section>
     </div>
-    <div class="center" id="main">
-        <h2> Verdt å vite </h2>
-        <p>Som student i Bergen er det enkelte steder i byen man ikke kan unngå å ta i bruk. For å gjøre
-        gåturen i sentrum litt enklere for deg har vi lagd et kart med en oversikt over slike steder. </p>
+    <div class="flex flex-column flex-wrap">
+      <div class="flex flex-column center">
+        <div class="flex flex-row main">
+          <article class="flex flex-column">
+            <section>
+              <h2> Verdt å vite </h2>
+              <p>Som student i Bergen er det enkelte steder i byen man ikke kan unngå å ta i bruk. For å gjøre
+              gåturen i sentrum litt enklere for deg har vi lagd et kart med en oversikt over slike steder. </p>
+            </section>
+            <section>
+              <p><b>Studentsenteret</b><br/>
+              På Studentsenteret kan du få studentbevis, kjøpe pensumbøker, trene, svømme og mye mer. Sammen (Studentsamskibnaden på Vestlandet) har sine lokaler her,
+              og de tilbyr informasjon, karriereveiledning og rådgivning, studentboliger og treningsmedlemskap. På Studentsenteret finner du også et Auditorium og
+              seminarrom som du med stor sannsynlighet vil ha forelesninger eller seminar i senere.  </p>
 
-        <p><b>Studentsenteret</b><br/>
-          På Studentsenteret kan du få studentbevis, kjøpe pensumbøker, trene, svømme og mye mer. Sammen (Studentsamskibnaden på Vestlandet) har sine lokaler her,
-          og de tilbyr informasjon, karriereveiledning og rådgivning, studentboliger og treningsmedlemskap. På Studentsenteret finner du også et Auditorium og
-          seminarrom som du med stor sannsynlighet vil ha forelesninger eller seminar i senere.  </p>
+              <p><b>Det Akademiske Kvarter</b><br/>
+              Det Akademiske Kvarter er studentenes kulturhus, her finner du flere ulike barer, konserter, god mat og studentvennlige priser. </p>
 
-        <p><b>Det Akademiske Kvarter</b><br/>
-          Det Akademiske Kvarter er studentenes kulturhus, her finner du flere ulike barer, konserter, god mat og studentvennlige priser. </p>
+              <p><b>Den Blå Steinen</b><br/>
+              Skal du kjøpe pensumbøker? Møte faddergruppen? Sjansen er stor for at du blir bedt om å komme
+              til "Den blå steinen" (som egentlig ikke er blå) i enden av Torgallmenningen.</p>
 
-          <p><b>Den Blå Steinen</b><br/>
-          Skal du kjøpe pensumbøker? Møte faddergruppen? Sjansen er stor for at du blir bedt om å komme
-          til "Den blå steinen" (som egentlig ikke er blå) i enden av Torgallmenningen.</p>
+              <p><b>SV-fakultetet</b><br />
+              Det Samfunnsvitenskapelige Fakultet er ett av syv fakulteter på UiB. Noen av de største studiene som holder til på
+              SV er sammenlignende politikk (Sampol), samfunnsøkonomi, administrasjon- og organisasjonsvitenskap (admorg), sosiologi og informasjonsvitenskap.</p>
 
-          <p><b>SV-fakultetet</b><br />
-          Det Samfunnsvitenskapelige Fakultet er ett av syv fakulteter på UiB. Noen av de største studiene som holder til på
-          SV er sammenlignende politikk (Sampol), samfunnsøkonomi, administrasjon- og organisasjonsvitenskap (admorg), sosiologi og informasjonsvitenskap.</p>
+              <p><b>Hulen</b><br />
+                Hulen er et studentdrevet utested og konsertsted som holder til i Olav Ryes vei 48 i Bergen. Musikken har en hovedvekt på alternativ rock og pop,
+                men også andre sjangre slipper til.</p>
+            </section>
+          </article>
+          <aside class="flex flex-column">
+            <div id="map"></div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
+          </aside>
+        </div>
+        <footer class="flex">
 
-          <p><b>Hulen</b><br />
-            Hulen er et studentdrevet utested og konsertsted som holder til i Olav Ryes vei 48 i Bergen. Musikken har en hovedvekt på alternativ rock og pop,
-            men også andre sjangre slipper til.</p>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
