@@ -8,26 +8,28 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Studentassistenten</title>
   </head>
-  <body class="flex flex-column fill">
-    <div class="flex flex-column hat">
-      <header class="flex flex-wrap">
-        <div class="flex" id="logo">
-          <a href="index.html">Studentassistenten</a>
-        </div>
-        <nav class="flex">
-          <a href="index.html">Hjem</a>
-          <a href="kart.html">Kart</a>
-          <a href="kontakt.html">Kontakt</a>
-        </nav>
-      </header>
+  <body class="flex fill">
+    <div class="flex">
+      <section class="flex header-top">
+        <header class="flex flex-wrap">
+          <div class="flex" id="logo">
+            <a href="index.html">Studentassistenten</a>
+          </div>
+          <nav class="flex">
+            <a href="index.html">Hjem</a>
+            <a href="kart.html">Kart</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </header>
+      </section>
       <section class="flex header-sub">
         <p id="page-title">Viktige Lokasjoner</p>
       </section>
     </div>
-    <div class="flex flex-column flex-wrap">
-      <div class="flex flex-column center">
-        <div class="flex flex-row main">
-          <article class="flex flex-column">
+    <div class="flex flex-wrap">
+      <div class="flex center">
+        <div class="flex main">
+          <article class="flex ">
             <section>
               <h2> Verdt å vite </h2>
               <p>Som student i Bergen er det enkelte steder i byen man ikke kan unngå å ta i bruk. For å gjøre
@@ -55,7 +57,7 @@
                 men også andre sjangre slipper til.</p>
             </section>
           </article>
-          <aside class="flex flex-column">
+          <aside class="flex">
             <div id="map"></div>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
           </aside>

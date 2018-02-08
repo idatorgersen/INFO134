@@ -7,14 +7,11 @@ html, body {
 
 .flex {
   display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
   flex-direction: column;
+}
+
+header.flex, nav.flex, .main {
+  flex-direction: row;
 }
 
 .flex-wrap {
