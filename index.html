@@ -1,40 +1,57 @@
-<!DOCTYPE html><!--- Ida --->
+<!DOCTYPE html>
 <html lang="nb">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/flex.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Studentassistenten</title>
   </head>
-  <body>
-    <header>
-      <nav class="center">
-        <div id="logo">Studentassistenten</div>
-          <a href="index.html">Hjem</a>
-          <a href="kart.html">Kart</a>
-          <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <img id="banner" src="img/high-res-landskap_0.jpg" />
-    </header>
-    <div class="center" id="main">
-      <section class="right">
-        <p><b>Sidebar</b><br/>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. </p>
+  <body class="flex fill">
+    <div class="flex">
+      <section class="flex header-top">
+        <header class="flex flex-wrap">
+          <div class="flex" id="logo">
+            <a href="index.html">Studentassistenten</a>
+          </div>
+          <nav class="flex">
+            <a href="index.html">Hjem</a>
+            <a href="kart.html">Kart</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </header>
       </section>
-      <section class="left">
-        <h2> Velkommen til Bergen!</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+      <section class="flex header-sub">
+        <p id="page-title"></p>
       </section>
-
+    </div>
+    <div class="flex flex-wrap">
+      <div class="flex center">
+        <div class="flex main">
+          <article class="flex">
+            <h2>Velkommen til Bergen!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sollicitudin erat, a efficitur turpis. Proin imperdiet placerat nisl, quis sollicitudin quam feugiat at. Suspendisse at luctus neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent pretium, lectus faucibus faucibus fringilla, turpis leo faucibus nulla, eget viverra erat nisl sed libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus pharetra eros mattis erat ultricies, ac fermentum nisi porttitor.</p>
+            <p>Proin in interdum ligula, ac ultricies enim. Donec tristique blandit odio, eget accumsan est tempor aliquet. Maecenas feugiat, purus sit amet laoreet tristique, orci nibh consectetur neque, sed dictum tellus libero ut nunc. Mauris et cursus turpis, at cursus tortor. Quisque sollicitudin placerat convallis. In vulputate luctus urna. Pellentesque quis sem vitae mauris luctus pharetra vitae id ligula. Sed vitae dolor ultrices orci bibendum venenatis.</p>
+            <h4>Overskrift?</h4>
+            <p>Donec placerat blandit semper. Morbi quis malesuada nisi. Proin et tempor elit. Curabitur vel tellus justo. Pellentesque malesuada volutpat eros, ac finibus tellus iaculis in. Cras auctor magna quis risus fringilla ultricies. In luctus massa et velit sollicitudin iaculis. Sed ac nisi fermentum, tincidunt est nec, auctor nibh.</p>
+            <h4>Svar på forrige overskrift...</h4>
+            <p>Vestibulum aliquet nunc magna, sit amet aliquam odio aliquam ac. Vivamus et finibus nunc. Nam nunc justo, condimentum sed hendrerit gravida, ornare sit amet urna. Nulla tincidunt ante a nulla porttitor ullamcorper. Phasellus fringilla dolor ut ligula euismod, eu accumsan sapien commodo. Morbi non turpis ex. Suspendisse vitae lacinia diam.</p>
+            <h4>Ny overskrift!</h4>
+            <p>Vivamus pretium sollicitudin ante et tincidunt. Integer quis libero hendrerit, accumsan ex sed, faucibus velit. Cras et elit ut neque mattis accumsan. Aenean sed ligula tortor. Vestibulum pretium auctor neque eget vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean fermentum nibh odio, nec feugiat metus ultricies nec. Praesent ac posuere augue. Vivamus tincidunt accumsan nulla, quis consequat eros ultrices id. Aenean pharetra dui urna, ac semper arcu euismod eget. Maecenas efficitur dictum magna, sed venenatis ligula lobortis eget. Nunc scelerisque sed arcu in efficitur. Aliquam mollis auctor tempus. Maecenas mollis neque ullamcorper porta volutpat. Morbi sed ex quis mauris ultrices aliquet. Mauris quis luctus leo.</p>
+          </article>
+          <aside class="flex">
+            <p><b>Sidebar</b><br/>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </aside>
+        </div>
+        <hr style="width:100%">
+        <footer class="flex">
+          <a href="om.html">Om Studentassistenten</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

@@ -1,38 +1,78 @@
 /* Ida */
 
 html{
-  background: #d9d9d9;
+
 }
 
 body{
-  padding: 0;
-  margin: 0;
   font-family: Helvetica;
   font-size: 14px;
 }
 
-header {
-  background-color: #5f5f5f;
+.fill {
+  background-image: url("../img/utsiktfloyen.jpg");
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-attachment: fixed;
 }
 
-nav{
+header {
+  min-height: 70px;
+
+  color: white;
   text-align: center;
   text-transform: uppercase;
   font-size: 13px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top {
+  background-color: #5f5f5f;
+}
+
+.header-sub {
+  background: rgba(143,143,143,0.8);
+  /*background-color: #8f8f8f;*/
+  min-height: 120px;
+
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
+
+  justify-content: center;
+  align-items: center;
 }
 
 #logo {
   color: white;
   font-family: "Times New Roman";
   font-size: 20px;
-  margin-bottom: 5px;
+}
 
+
+/* Datamaskin */
+nav {
+  width: 20%;
+  min-width: 250px;
+
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+
+#page-title {
+  color: white;
+  font-family: "Times New Roman";
+  font-variant: small-caps;
+  font-size: 30px;
 }
 
 h2 {
   font-family: "Times New Roman";
   font-size: 25px;
-
 }
 
 p{
@@ -40,46 +80,66 @@ p{
 }
 
 .center {
-	margin-left: auto;
-	margin-right: auto;
-	padding:15px;
-}
-
-#main{
-  width: 80%;
+  background: rgba(255,255,255,0.9);
+  /*background-color: white;*/
   box-shadow: 5px 5px 20px grey;
-  background-color: white;
-}
 
-#banner{
-  width: 100%;
+  padding: 10px;
 }
 
 #map {
-  width: 100%;
-  height: 460px;
+  width: 500px;
+  height: 500px;
 }
 
-.left{
-  width: 70%;
-}
-
-.right{
-  width: 30%;
-  float: right;
-  margin-top: 10px;
-}
-
-nav>a{
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-a:link, a:visited {
+a {
   text-decoration: none;
+  color: black;
+}
+
+header a:link, header a:visited {
   color: white;
 }
 
-a:hover {
+nav a:hover {
   color: black;
+}
+
+footer {
+  height: 120px;
+  text-align: center;
+
+  justify-content: space-around;
+}
+
+
+
+/* Nettbrett */
+@media all and (max-width: 800px){
+  nav {
+    justify-content: space-around;
+    min-height: 20px;
+    min-width: 250px;
+  }
+
+  header{
+    align-items: center;
+    flex-direction: column;
+    min-height: 50px;
+  }
+}
+
+/* Mobil */
+@media all and (max-width: 500px){
+  nav{
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav>a {
+    margin-top: 5px;
+  }
+  .main {
+    flex-direction: column;
+  }
 }
