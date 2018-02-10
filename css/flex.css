@@ -23,7 +23,9 @@ header.flex, nav.flex, .main {
   .flex-wrap{
     margin: 0;
   }
-
+}
+/* Mobil */
+@media all and (max-width: 500px){
   header.flex, nav.flex{
     flex-direction: column;
     margin-bottom: 3px;
