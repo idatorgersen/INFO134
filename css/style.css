@@ -51,16 +51,14 @@ h2, h3 {
   font-family: "Times New Roman";
 }
 
-p{
-  padding: 0 20px;
-}
+
 
 .center {
   background: rgba(255,255,255,0.9);
   /*background-color: white;*/
   /*box-shadow: 5px 5px 20px grey;*/
 
-  padding: 10px;
+  padding: 20px;
 
   margin-top: 100px;
   margin-bottom: 60px;
