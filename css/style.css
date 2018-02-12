@@ -51,7 +51,9 @@ h2, h3 {
   font-family: "Times New Roman";
 }
 
-
+aside{
+  padding-left: 10px;
+}
 
 .center {
   background: rgba(255,255,255,0.9);
