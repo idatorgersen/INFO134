@@ -47,8 +47,10 @@ const hotspots = [ // Sindre og Ida
     name: "Hulen",
     pos: {lat: 60.384854, lng:5.325547}
   }
-
 ];
+
+let markers = [];
+
 //Skal legge inn dynamisk endring av zoom her
 function initMap() { // Google
   const map = new google.maps.Map(document.getElementById('map'), {
@@ -60,25 +62,31 @@ function initMap() { // Google
 }
 
 function addMarker(spot, map) { // Sindre
-  let marker = new google.maps.Marker({
-    position: spot.pos,
-    title: spot.name,
-    map: map
-  });
-
   let info = new google.maps.InfoWindow({
     content: spot.name
   });
 
+  let marker = new google.maps.Marker({
+    position: spot.pos,
+    title: spot.name,
+    map: map,
+    infowindow: info
+  });
+
+  markers.push(marker);
+
   marker.addListener('click', function() {
-    info.open(map, marker);
+    markers.forEach(function(marker) {
+      marker.infowindow.close(map, marker)
+    });
+    this.infowindow.open(map, marker);
   });
 
   // Denne koden gjør at markers bouncer konstant etter onclick. Veldig unødvendig.
-  marker.addListener('click', function() {
+  /*marker.addListener('click', function() {
     if(this.getAnimation() !== null) this.setAnimation(null);
     else this.setAnimation(google.maps.Animation.BOUNCE);
-  })
+  });*/
 }
 
 function getCenterCoordinates(coordinates) { // Sindre
