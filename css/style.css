@@ -53,6 +53,7 @@ h2, h3 {
 
 aside{
   padding-left: 10px;
+  justify-content: space-between;
 }
 
 .center {
