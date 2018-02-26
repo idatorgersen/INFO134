@@ -93,6 +93,10 @@ footer {
   justify-content: space-around;
 }
 
+#doliste{
+  list-style-type: none;
+}
+
 
 
 /* Nettbrett */
