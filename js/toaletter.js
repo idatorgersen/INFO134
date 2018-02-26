@@ -1,7 +1,7 @@
 
-let toaletter = dokart["entries"];
+const toaletter = dokart["entries"];
 
-let listeElement = "";
+let markers = [];
 
 window.onload = function() {
   for(var i = 0; i < toaletter.length; i++) {
@@ -21,9 +21,24 @@ function initMap() { // Google
 }
 
 function addMarker(spot, map) { // Sindre
+  let info = new google.maps.InfoWindow({
+    content: spot.adresse
+  });
+
   let marker = new google.maps.Marker({
     position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
     title: spot.id,
-    map: map
+    label: spot.id,
+    map: map,
+    infowindow: info
+  });
+
+  markers.push(marker);
+
+  marker.addListener('click', function() {
+    markers.forEach(function(marker) {
+      marker.infowindow.close(map, marker)
+    });
+    this.infowindow.open(map, marker);
   });
 }
