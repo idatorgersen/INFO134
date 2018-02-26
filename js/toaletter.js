@@ -1,10 +1,20 @@
 
-function initMap() { // Google
+let toaletter = dokart["entries"];
+
+let listeElement = "";
+
+window.onload = function() {
+  for(var i = 0; i < toaletter.length; i++) {
+    document.getElementById("doliste").innerHTML += "<li>" + toaletter[i]["plassering"] + "</li>";
+  }
+}
+
+/*function initMap() { // Google
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: getCenterCoordinates(toilets)
   });
-}
+}*/
 
 function addMarker(spot, map) { // Sindre
   let info = new google.maps.InfoWindow({
