@@ -26,7 +26,7 @@ function addMarker(spot, map) { // Sindre
   });
 
   let marker = new google.maps.Marker({
-    position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
+    position: {lat: spot.latitude, lng: spot.longitude},
     title: spot.id,
     label: spot.id,
     map: map,

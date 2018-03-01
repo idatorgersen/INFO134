@@ -5,7 +5,7 @@ var dokart = {
       "tid_sondag":"07.00 - 23.15",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.388076",
+      "latitude":60.388076,
       "tid_hverdag":"07.00 - 23.15",
       "plassering":"NONNESETER TERMINAL, SØR",
       "tid_lordag":"07.00 - 23.15",
@@ -15,14 +15,14 @@ var dokart = {
       "id":"1",
       "place":"NONNESETER TERMINAL, SOUTH",
       "dame":"1",
-      "longitude":"5.334937"
+      "longitude":5.334937
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.388871",
+      "latitude":60.388871,
       "tid_hverdag":"05.30 - 23.50",
       "plassering":"NONNESETER TERMINAL , NORD",
       "tid_lordag":"07.00 - 23.15",
@@ -32,14 +32,14 @@ var dokart = {
       "id":"2",
       "place":"NONNESETER TERMINAL , NORTH",
       "dame":"1",
-      "longitude":"5.334079"
+      "longitude":5.334079
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.388868",
+      "latitude":60.388868,
       "tid_hverdag":"09.00 - 17.00",
       "plassering":"SKYSS KUNDESENTER",
       "tid_lordag":"09.00 - 15.00",
@@ -49,14 +49,14 @@ var dokart = {
       "id":"3",
       "place":"SKYSS CUSTOMER CENTRE",
       "dame":"1",
-      "longitude":"5.334079"
+      "longitude":5.334079
     },
     {
       "herre":"1",
       "tid_sondag":"07.00 - 23.00",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.39041",
+      "latitude":60.39041,
       "tid_hverdag":"07.00 - 23.00",
       "plassering":"JERNBANESTASJONEN",
       "tid_lordag":"07.00 - 23.00",
@@ -66,14 +66,14 @@ var dokart = {
       "id":"4",
       "place":"RAILWAY STATION",
       "dame":"1",
-      "longitude":"5.332995"
+      "longitude":5.332995
     },
     {
       "herre":"1",
       "tid_sondag":"08.30 - 22.00",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.394554",
+      "latitude":60.394554,
       "tid_hverdag":"09.00 - 23.00",
       "plassering":"MATHALLEN",
       "tid_lordag":"08.30 - 22.00",
@@ -83,14 +83,14 @@ var dokart = {
       "id":"5",
       "place":"FISH MARKET",
       "dame":"1",
-      "longitude":"5.324099"
+      "longitude":5.324099
     },
     {
       "herre":"1",
       "tid_sondag":"08.00 - 18.00",
       "pissoir_only":"NULL",
       "stellerom":"",
-      "latitude":"60.395432",
+      "latitude":60.395432,
       "tid_hverdag":"08.00 - 18.00",
       "plassering":"STRANDKAITERMINALEN",
       "tid_lordag":"08.00 - 18.00",
@@ -100,14 +100,14 @@ var dokart = {
       "id":"6",
       "place":"STRANDKAI BOAT TERMINAL",
       "dame":"1",
-      "longitude":"5.321034"
+      "longitude":5.321034
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.3913929",
+      "latitude":60.3913929,
       "tid_hverdag":"08.00 - 15.00",
       "plassering":"BERGEN KOMMUNE, INNBYGGERSERVICE",
       "tid_lordag":"NULL",
@@ -117,14 +117,14 @@ var dokart = {
       "id":"7",
       "place":"CITIZEN SERVICE CENTRE",
       "dame":"1",
-      "longitude":"5.326855"
+      "longitude":5.326855
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.3891794",
+      "latitude":60.3891794,
       "tid_hverdag":"09.00 - 21.00",
       "plassering":"BERGEN STORSENTER",
       "tid_lordag":"09.00 - 18.00",
@@ -134,14 +134,14 @@ var dokart = {
       "id":"8",
       "place":"BERGEN STORSENTER",
       "dame":"1",
-      "longitude":"5.3305793"
+      "longitude":5.3305793
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.392209",
+      "latitude":60.392209,
       "tid_hverdag":"09.00 - 21.00",
       "plassering":"SUNDT MOTEHUS",
       "tid_lordag":"09.00 - 18.00",
@@ -151,14 +151,14 @@ var dokart = {
       "id":"9",
       "place":"SUNDT FASHION HOUSE",
       "dame":"1",
-      "longitude":"5.324011"
+      "longitude":5.324011
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.3928444",
+      "latitude":60.3928444,
       "tid_hverdag":"09.00 - 20.00",
       "plassering":"XHIBITION",
       "tid_lordag":"09.00 - 18.00",
@@ -168,14 +168,14 @@ var dokart = {
       "id":"10",
       "place":"XHIBITION",
       "dame":"1",
-      "longitude":"5.3239541"
+      "longitude":5.3239541
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.3947371",
+      "latitude":60.3947371,
       "tid_hverdag":"09.00 - 21.00",
       "plassering":"GALLERIET",
       "tid_lordag":"09.00 - 18.00",
@@ -185,14 +185,14 @@ var dokart = {
       "id":"11",
       "place":"GALLERIET",
       "dame":"1",
-      "longitude":"5.3243561"
+      "longitude":5.3243561
     },
     {
       "herre":"1",
       "tid_sondag":"NULL",
       "pissoir_only":"NULL",
       "stellerom":"1",
-      "latitude":"60.3944194",
+      "latitude":60.3944194,
       "tid_hverdag":"10.00 - 20.00",
       "plassering":"KLØVERHUSET",
       "tid_lordag":"10.00 - 18.00",
@@ -202,14 +202,14 @@ var dokart = {
       "id":"12",
       "place":"KLØVERHUSET",
       "dame":"1",
-      "longitude":"5.3205649"
+      "longitude":5.3205649
     },
     {
       "herre":"1",
       "tid_sondag":"09.00 - 18.00",
       "pissoir_only":"NULL",
       "stellerom":"NULL",
-      "latitude":"60.3974108",
+      "latitude":60.3974108,
       "tid_hverdag":"09.00 - 18.00",
       "plassering":"BRYGGEN BESØKSSENTER",
       "tid_lordag":"09.00 - 18.00",
@@ -219,14 +219,14 @@ var dokart = {
       "id":"13",
       "place":"BRYGGEN VISITOR CENTRE",
       "dame":"1",
-      "longitude":"5.3222145"
+      "longitude":5.3222145
     },
     {
       "herre":"NULL",
       "tid_sondag":"ALL",
       "pissoir_only":"1",
       "stellerom":"NULL",
-      "latitude":"60.397359",
+      "latitude":60.397359,
       "tid_hverdag":"ALL",
       "plassering":"C. SUNDTSGT",
       "tid_lordag":"ALL",
@@ -236,14 +236,14 @@ var dokart = {
       "id":"14",
       "place":"C. SUNDTSGT",
       "dame":"NULL",
-      "longitude":"5.313963"
+      "longitude":5.313963
     },
     {
       "herre":"NULL",
       "tid_sondag":"ALL",
       "pissoir_only":"1",
       "stellerom":"NULL",
-      "latitude":"60.397557",
+      "latitude":60.397557,
       "tid_hverdag":"ALL",
       "plassering":"NORDNES SKOLE",
       "tid_lordag":"ALL",
@@ -253,7 +253,7 @@ var dokart = {
       "id":"15",
       "place":"NORDNES SKOLE",
       "dame":"NULL",
-      "longitude":"5.307858"
+      "longitude":5.307858
     }
   ],
   "page":1,
