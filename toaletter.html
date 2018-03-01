@@ -33,6 +33,47 @@
           <ul id="doliste">
 
           </ul>
+
+          <p> <b>Avansert søk</b></p>
+      <form>
+          <label name="kjønn">Kjønn<br />
+            <input type="radio" name="kjønn">Mann
+            <input type="radio" name="kjønn">Kvinne
+          </label><br /><br />
+
+        <table>
+          <tr>
+            <label name="rullestol">
+              <td>Rullestoltilgang</td>
+              <td><input type="checkbox" name="rullestol"></td>
+            </label>
+            <label name="åpen">
+              <td>Åpen nå</td>
+              <td><input type="checkbox" name="åpen"></td>
+            </label>
+          </tr>
+          <tr>
+            <label name="stellerom">
+              <td>Stellerom</td>
+              <td><input type="checkbox" name="stellerom"></td>
+            </label>
+            <label name="gratis">
+              <td>Gratis</td>
+              <td><input type="checkbox" name="gratis"></td>
+            </label>
+          </tr>
+        </table>
+        <br />
+          <label name="tid"> Søk etter åpningstid<br />
+            <input  type="number" name="hour" min="00" max="23"> :
+            <input  type="number" name="minute" min="00" max="59">
+          </label><br /><br />
+
+          <label name="makspris">Makspris<br />
+            <input type="number" name="makspris" min="0" max="100">kr
+          </label>
+      </form>
+
         </article>
         <aside class="flex">
           <div class="flex" id="map"></div>
