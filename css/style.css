@@ -51,11 +51,6 @@ h2, h3 {
   font-family: "Times New Roman";
 }
 
-aside{
-  padding-left: 10px;
-  justify-content: space-between;
-}
-
 .center {
   background: rgba(255,255,255,0.9);
   /*background-color: white;*/
@@ -97,7 +92,9 @@ footer {
   list-style-type: none;
 }
 
-
+.main {
+  justify-content: space-between;
+}
 
 /* Nettbrett */
 @media all and (max-width: 800px){
