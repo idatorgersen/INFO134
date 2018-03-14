@@ -1,3 +1,7 @@
 function search() {
-  document.getElementById("search").submit();
+  let form = document.getElementById("search");
+
+  for(let i = 0; i < form.length; i++) {
+    console.log(form[i]);
+  }
 }
