@@ -35,9 +35,9 @@
           </ul>
 
           <p><b>Avansert søk</b></p>
-          <form>
+          <form id="search">
             <table>
-              <label name="kjønn">
+              <legend name="kjønn">
                 <tr>
                   <td>
                     Kjønn:
@@ -53,46 +53,38 @@
                     <input type="radio" name="kjønn" id="female" value="female"><label for="female">Kvinne</label>
                   </td>
                 </tr>
-              </label>
+              </legend>
               <tr>
                 <td>
-                  <label name="rullestol">
-                    <input type="checkbox" name="rullestol">
-                    Rullestoltilgang
-                  </label>
+                  <input type="checkbox" name="rullestol">
+                  <label for="rullestol">Rullestoltilgang</label>
                 </td>
                 <td>
-                  <label name="åpen">
-                    <input type="checkbox" name="åpen">
-                    Åpen nå
-                  </label>
+                  <input type="checkbox" name="åpen">
+                  <label for="åpen">Åpen nå</label>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label name="stellerom">
-                    <input type="checkbox" name="stellerom">
-                    Stellerom
-                  </label>
+                  <input type="checkbox" name="stellerom">
+                  <label for="stellerom">Stellerom</label>
                 </td>
                 <td>
-                  <label name="gratis">
-                    <input type="checkbox" name="gratis">
-                    Gratis
-                  </label>
+                  <input type="checkbox" name="gratis">
+                  <label for="gratis">Gratis</label>
                 </td>
               </tr>
             </table>
             <br />
-            <label name="tid"> Søk etter åpningstid<br />
-              <input  type="number" name="hour" min="00" max="23"> :
-              <input  type="number" name="minute" min="00" max="59">
-            </label><br /><br />
+            <label name="tid"> Søk etter åpningstid</label><br />
+            <input  type="number" name="hour" min="00" max="23"> :
+            <input  type="number" name="minute" min="00" max="59">
+            <br /><br />
 
-            <label name="makspris">Makspris<br />
-              <input type="number" name="makspris" min="0" max="100">kr
-            </label>
+            <label for="makspris">Makspris</label><br />
+            <input type="number" id="makspris" name="makspris" min="0" max="100">kr
           </form>
+          <button type="submit" form="search" onclick="search()">Søk</button>
         </article>
         <aside class="flex">
           <div class="flex" id="map"></div>

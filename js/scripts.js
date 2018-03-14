@@ -1,1 +1,3 @@
-console.log("tekst");
+function search() {
+  document.getElementById("search").submit();
+}
