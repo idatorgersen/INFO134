@@ -30,41 +30,20 @@
             <h2> Toaletter i Bergen </h2>
             <input type="text" placeholder="Hurtigsøk..">
             <button onclick="showSearch()" class="advancedButton">Avansert søk</button>
+            <form id="search">
+              <table><br />
+                <legend name="kjønn">
+                  <tr>
+                    <td>
+                      <label name="male">
+                        <input type="radio" name="kjønn" id="male" value="male">Mann
+                      </label>
+                    </td>
 
-            <p> Oversikt over toaletter i Bergen. </p>
-          </section>
-          <ul id="doliste">
-
-          </ul>
-
-          <form id="search">
-            <table>
-              <legend name="kjønn">
-                <tr>
-                  <td>
-                    Kjønn:
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label name="male">
-                      <input type="radio" name="kjønn" id="male" value="male">Mann
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label name="female">
-                      <input type="radio" name="kjønn" id="female" value="female">Kvinne
-                    </label>
-                  </td>
-                </tr>
-              </legend>
-              <tr>
+                </legend>
                 <td>
                   <label name="rullestol">
-                    <input type="checkbox" name="rullestol">
-                    Rullestoltilgang
+                    <input type="checkbox" name="rullestol">Rullestoltilgang
                   </label>
                 </td>
                 <td>
@@ -72,8 +51,16 @@
                     <input type="checkbox" name="åpen">Åpen nå
                   </label>
                 </td>
-              </tr>
-              <tr>
+                </tr>
+
+                <legend name="kjønn">
+                  <tr>
+                    <td>
+                      <label name="female">
+                        <input type="radio" name="kjønn" id="female" value="female">Kvinne
+                      </label>
+                    </td>
+                </legend>
                 <td>
                   <label name="stellerom">
                     <input type="checkbox" name="stellerom">Stellerom
@@ -85,17 +72,27 @@
                   </label>
                 </td>
               </tr>
-            </table>
-            <br />
-            <label name="tid"> Søk etter åpningstid</label><br />
-            <input  type="number" name="hour" min="00" max="23"> :
-            <input  type="number" name="minute" min="00" max="59">
-            <br /><br />
 
-            <label for="makspris">Makspris</label><br />
-            <input type="number" id="makspris" name="makspris" min="0" max="100">kr
-          <br><button type="button" form="search" onclick="search()" class="searchButton">Søk</button>
-        </form>
+              </table>
+              <table>
+                <tr>
+                  <td>
+                    <label name="tid"> Åpningstid:</label>
+                    <input  type="number" name="hour" min="00" max="23"> :
+                    <input  type="number" name="minute" min="00" max="59">
+                  </td>
+                  <td>
+                    <label for="makspris">Makspris:</label>
+                    <input type="number" id="makspris" name="makspris" min="0" max="100" placeholder="kr">
+                  </td>
+                </tr>
+              </table>
+            <button type="button" form="search" onclick="search()" class="searchButton">Søk</button>
+            </form>
+          </section>
+          <br />
+          <p> <i>Oversikt over toaletter i Bergen. </i></p>
+          <ul id="doliste"></ul>
         </article>
         <aside class="flex">
           <div class="flex" id="map"></div>

@@ -124,6 +124,11 @@ footer {
   display:none;
 }
 
+table{
+  width: 100%;
+  font-size: 13px;
+}
+
 /* Nettbrett */
 @media all and (max-width: 800px){
   nav {
