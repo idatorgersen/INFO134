@@ -58,9 +58,9 @@ function addMarker(spot, map) { // Sindre
 }
 
 function popup(id) {
-  let ourMarker = this.m.markers.forEach(function(marker) {
-    if(marker.id == id) return marker;
-  })
+  let ourMarker = this.m.markers.find(function(marker) {
+    if(marker.label == id) return marker;
+  });
   google.maps.event.trigger(ourMarker, 'click');
 }
 
