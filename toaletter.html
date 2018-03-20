@@ -26,15 +26,17 @@
     <div class="flex flex-wrap center">
       <div class="flex main">
         <article class="flex ">
-          <section>
+          <section class="toptext">
             <h2> Toaletter i Bergen </h2>
+            <input type="text" placeholder="Hurtigsøk..">
+            <button onclick="showSearch()" class="advancedButton">Avansert søk</button>
+            
             <p> Oversikt over toaletter i Bergen. </p>
           </section>
           <ul id="doliste">
 
           </ul>
 
-          <p><b>Avansert søk</b></p>
           <form id="search">
             <table>
               <legend name="kjønn">
@@ -92,8 +94,8 @@
 
             <label for="makspris">Makspris</label><br />
             <input type="number" id="makspris" name="makspris" min="0" max="100">kr
-          </form>
-          <button type="button" form="search" onclick="search()">Søk</button>
+          <br><button type="button" form="search" onclick="search()" class="searchButton">Søk</button>
+        </form>
         </article>
         <aside class="flex">
           <div class="flex" id="map"></div>

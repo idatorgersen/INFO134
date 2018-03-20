@@ -96,6 +96,38 @@ footer {
   justify-content: space-between;
 }
 
+.toptext input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 14px;
+}
+.advancedButton {
+    border: none;
+    background-color: #5f5f5f;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.searchButton{
+  border: none;
+  background-color: #5f5f5f;
+  color: white;
+  padding: 5px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+#search {
+  display:none;
+}
+
 /* Nettbrett */
 @media all and (max-width: 800px){
   nav {
@@ -132,5 +164,4 @@ footer {
   .top-bar {
     position: absolute;
   }
-
 }

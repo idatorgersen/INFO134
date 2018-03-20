@@ -1,5 +1,19 @@
 const toaletter = dokart["entries"];
 
+window.onload = function startProgram()
+{
+  var xhr = new XMLHttpRequest();
+  var url="http://hotell.difi.no/api/json/bergen/dokart?";
+  xhr.open("GET", url);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState ===4 && xhr.status === 200){
+      console.log("Type", xhr.getResponseHeader("Content-Type"));
+      console.log("Text", xhr.responseText);
+    }
+  };
+  xhr.send();
+}
+
 window.onload = function() {
   for(var i = 0; i < toaletter.length; i++) {
     document.getElementById("doliste").innerHTML += "<li><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].id + ". " + toaletter[i].adresse + "</a></li>";
@@ -48,4 +62,16 @@ function popup(id) {
     if(marker.id == id) return marker;
   })
   google.maps.event.trigger(ourMarker, 'click');
+}
+
+function showSearch(){
+	var x = document.getElementById('search');
+    if (x.style.display == 'block')
+    {
+        x.style.display = 'none';
+    }
+    else
+    {
+        x.style.display = 'block';
+    }
 }
