@@ -81,7 +81,9 @@ header a:link, header a:visited {
 nav a:hover {
   color: black;
 }
-
+#current {
+    border-bottom: 2px solid #fff;
+}
 footer {
   height: 60px;
   text-align: center;
@@ -91,6 +93,9 @@ footer {
 #doliste{
   list-style-type: none;
 }
+#doliste a:hover{
+  color: #BC1010;
+  }
 
 .main  {
   justify-content: space-between;
