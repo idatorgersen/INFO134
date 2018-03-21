@@ -1,6 +1,7 @@
-const toaletter = dokart["entries"];
+var toaletter, map;
+getData();
 
-window.onload = function startProgram()
+/*window.onload = function startProgram()
 {
   var xhr = new XMLHttpRequest();
   var url="http://hotell.difi.no/api/json/bergen/dokart?";
@@ -12,7 +13,7 @@ window.onload = function startProgram()
     }
   };
   xhr.send();
-}
+}*/
 
 window.onload = function() {
   for(var i = 0; i < toaletter.length; i++) {
@@ -22,19 +23,25 @@ window.onload = function() {
 }
 
 function initMap() { // Google
-  const map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: new google.maps.LatLng(60.395053,5.319800),
     markers: []
   });
-  for(var i = 0; i < toaletter.length; i++){
-    addMarker(toaletter[i], map);
-  }
 
-  popup = popup.bind({m: map});
+  updateMarkers();
 }
 
-function addMarker(spot, map) { // Sindre
+function updateMarkers(filter) {
+  map.markers.forEach(function(marker) {
+    marker.setMap(null);
+  });
+  for(var i = 0; i < toaletter.length; i++) {
+    addMarker(toaletter[i]);
+  }
+}
+
+function addMarker(spot) { // Sindre
   let info = new google.maps.InfoWindow({
     content: spot.adresse
   });
@@ -57,14 +64,14 @@ function addMarker(spot, map) { // Sindre
   });
 }
 
-function popup(id) {
-  let ourMarker = this.m.markers.find(function(marker) {
+function popup(id) { // Sindre
+  let ourMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
   });
   google.maps.event.trigger(ourMarker, 'click');
 }
 
-function showSearch(){
+function showSearch(){ // Ida
 	var x = document.getElementById('search');
     if (x.style.display == 'block')
     {
@@ -74,4 +81,30 @@ function showSearch(){
     {
         x.style.display = 'block';
     }
+}
+
+function search() { // Ida og Sindre
+  let form = document.getElementById("search");
+  let values = {};
+
+  for(let i = 0; i < form.length; i++) {
+    values[form[i].id] = form[i].checked || Number(form[i].value);
+  }
+  console.log(values);
+  getData(values);
+  updateMarkers();
+}
+
+function getData(filter) {
+  toaletter = dokart["entries"];
+
+  if(filter) {
+    toaletter = toaletter.filter(t => {
+      return (!filter.herre || t.herre)
+        && (!filter.dame || t.dame)
+        && (!filter.rullestol || t.rullestol)
+        && (!filter.stellerom || t.stellerom)
+    });
+    //toaletter = toaletter.filter(t => t.kvinne = filter.kvinne);
+  }
 }
