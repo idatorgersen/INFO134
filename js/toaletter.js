@@ -100,10 +100,10 @@ function getData(filter) {
 
   if(filter) {
     toaletter = toaletter.filter(t => {
-      return (!filter.herre || t.herre)
-        && (!filter.dame || t.dame)
-        && (!filter.rullestol || t.rullestol)
-        && (!filter.stellerom || t.stellerom)
+      return (!filter.herre || Boolean(t.herre))
+        && (!filter.dame || Boolean(t.dame))
+        && (!filter.rullestol || Number(t.rullestol))
+        && (!filter.stellerom || Number(t.stellerom))
     });
     //toaletter = toaletter.filter(t => t.kvinne = filter.kvinne);
   }
