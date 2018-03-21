@@ -16,7 +16,9 @@ getData();
 }*/
 
 window.onload = function() {
-  listMarkers();
+  currentdate = new Date();
+  document.getElementById("hour").value = currentdate.getHours();
+  document.getElementById("minute").value = currentdate.getMinutes();
 }
 
 function initMap() { // Google
@@ -27,6 +29,7 @@ function initMap() { // Google
   });
 
   updateMarkers();
+  listMarkers();
 }
 
 function updateMarkers() {
