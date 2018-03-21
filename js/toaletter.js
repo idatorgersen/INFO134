@@ -16,10 +16,7 @@ getData();
 }*/
 
 window.onload = function() {
-  for(var i = 0; i < toaletter.length; i++) {
-    document.getElementById("doliste").innerHTML += "<li><b>" + toaletter[i].id + ". </b><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].adresse + "</a></li>";
-
-  }
+  listMarkers();
 }
 
 function initMap() { // Google
@@ -32,7 +29,7 @@ function initMap() { // Google
   updateMarkers();
 }
 
-function updateMarkers(filter) {
+function updateMarkers() {
   map.markers.forEach(function(marker) {
     marker.setMap(null);
   });
@@ -64,6 +61,13 @@ function addMarker(spot) { // Sindre
   });
 }
 
+function listMarkers() {
+  document.getElementById("doliste").innerHTML = "";
+  for(var i = 0; i < toaletter.length; i++) {
+    document.getElementById("doliste").innerHTML += "<li><b>" + toaletter[i].id + ". </b><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].adresse + "</a></li>";
+  }
+}
+
 function popup(id) { // Sindre
   let ourMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
@@ -93,6 +97,7 @@ function search() { // Ida og Sindre
   console.log(values);
   getData(values);
   updateMarkers();
+  listMarkers();
 }
 
 function getData(filter) {
