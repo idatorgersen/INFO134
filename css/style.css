@@ -114,6 +114,7 @@ aside#kart{
     margin-top: 8px;
     margin-right: 16px;
     font-size: 14px;
+    appearance: searchfield;
 }
 .advancedButton {
     border: none;
@@ -142,11 +143,13 @@ table{
 }
 
 .time-input {
-  appearance: textfield;
+  appearance: searchfield;
   width: 40px;
   height: 20px;
   padding: 0px;
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  text-align: center;
 }
 
 /* Nettbrett */
