@@ -139,6 +139,12 @@ table{
   font-size: 13px;
 }
 
+.time-input {
+  appearance: textfield;
+  width: 40px;
+  height: 20px;
+  padding: 0px;
+}
 
 /* Nettbrett */
 @media all and (max-width: 800px){

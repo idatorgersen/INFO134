@@ -37,19 +37,19 @@
                   <tr>
                     <td>
                       <label name="male">
-                        <input type="radio" name="kjønn" id="male" value="male">Mann
+                        <input type="radio" name="kjønn" id="herre" value="0">Mann
                       </label>
                     </td>
 
                 </legend>
                 <td>
                   <label name="rullestol">
-                    <input type="checkbox" name="rullestol">Rullestoltilgang
+                    <input type="checkbox" name="rullestol" id="rullestol" value="0">Rullestoltilgang
                   </label>
                 </td>
                 <td>
                   <label name="åpen">
-                    <input type="checkbox" name="åpen">Åpen nå
+                    <input type="checkbox" name="åpen" id="åpen" value="0">Åpen nå
                   </label>
                 </td>
                 </tr>
@@ -58,18 +58,18 @@
                   <tr>
                     <td>
                       <label name="female">
-                        <input type="radio" name="kjønn" id="female" value="female">Kvinne
+                        <input type="radio" name="kjønn" id="kvinne" value="0">Kvinne
                       </label>
                     </td>
                 </legend>
                 <td>
                   <label name="stellerom">
-                    <input type="checkbox" name="stellerom">Stellerom
+                    <input type="checkbox" name="stellerom" id="stellerom" value="0">Stellerom
                   </label>
                 </td>
                 <td>
                   <label name="gratis">
-                    <input type="checkbox" name="gratis">Gratis
+                    <input type="checkbox" name="gratis" id="gratis" value="0">Gratis
                   </label>
                 </td>
               </tr>
@@ -79,12 +79,12 @@
                 <tr>
                   <td>
                     <label name="tid"> Åpningstid:</label>
-                    <input  type="number" name="hour" min="00" max="23"> :
-                    <input  type="number" name="minute" min="00" max="59">
+                    <input class="time-input" type="number" name="hour" id="hour" min="00" max="23"> :
+                    <input class="time-input" type="number" name="minute" id="minute" min="00" max="59">
                   </td>
                   <td>
                     <label for="makspris">Makspris:</label>
-                    <input type="number" id="makspris" name="makspris" min="0" max="100" placeholder="kr">
+                    <input type="number" name="makspris" id="makspris" min="0" max="100" placeholder="kr">
                   </td>
                 </tr>
               </table>
