@@ -1,5 +1,4 @@
 var toaletter, map;
-getData();
 
 /*window.onload = function startProgram()
 {
@@ -15,10 +14,14 @@ getData();
   xhr.send();
 }*/
 
-window.onload = function() {
+window.onload = function() { // Ida og Sindre
   currentdate = new Date();
   document.getElementById("hour").value = currentdate.getHours();
   document.getElementById("minute").value = currentdate.getMinutes();
+
+  getData();
+  updateMarkers();
+  listMarkers();
 }
 
 function initMap() { // Google
@@ -27,12 +30,9 @@ function initMap() { // Google
     center: new google.maps.LatLng(60.395053,5.319800),
     markers: []
   });
-
-  updateMarkers();
-  listMarkers();
 }
 
-function updateMarkers() {
+function updateMarkers() { // Sindre
   map.markers.forEach(function(marker) {
     marker.setMap(null);
   });
@@ -64,7 +64,7 @@ function addMarker(spot) { // Sindre
   });
 }
 
-function listMarkers() {
+function listMarkers() { // Ida
   document.getElementById("doliste").innerHTML = "";
   for(var i = 0; i < toaletter.length; i++) {
     document.getElementById("doliste").innerHTML += "<li><b>" + toaletter[i].id + ". </b><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].adresse + "</a></li>";
