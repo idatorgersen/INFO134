@@ -97,7 +97,6 @@ footer {
   justify-content: space-between;
 }
 
-/* Denne id-en eksisterer kun på toaletter.html for å få kartet neders i stedet for i sidebar*/
 aside#kart{
   flex-direction: column;
   display: block;
