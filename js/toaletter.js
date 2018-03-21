@@ -17,7 +17,7 @@ var toaletter, map;
 window.onload = function() { // Ida og Sindre
   currentdate = new Date();
   document.getElementById("hour").value = currentdate.getHours();
-  document.getElementById("minute").value = currentdate.getMinutes();
+  document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2); //Legger til 0 foran tall 0-9. = 01,02 osv.
 
   getData();
   updateMarkers();
