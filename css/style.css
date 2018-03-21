@@ -38,16 +38,6 @@ header {
   font-size: 20px;
 }
 
-nav {
-  width: 20%;
-  min-width: 300px;
-
-  justify-content: space-between;
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-}
-
 h2, h3 {
   font-family: "Segoe UI",Arial;
 }
@@ -69,6 +59,16 @@ h2, h3 {
   height:500px;
 }
 
+nav {
+  width: 20%;
+  min-width: 300px;
+
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -85,7 +85,6 @@ nav a:hover {
 footer {
   height: 60px;
   text-align: center;
-
   justify-content: space-around;
 }
 
