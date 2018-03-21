@@ -17,7 +17,7 @@ getData();
 
 window.onload = function() {
   for(var i = 0; i < toaletter.length; i++) {
-    document.getElementById("doliste").innerHTML += "<li><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].id + ". " + toaletter[i].adresse + "</a></li>";
+    document.getElementById("doliste").innerHTML += "<li><b>" + toaletter[i].id + ". </b><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].adresse + "</a></li>";
 
   }
 }
