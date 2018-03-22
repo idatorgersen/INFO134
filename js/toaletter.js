@@ -68,9 +68,9 @@ function addMarker(spot) { // Sindre
 function listMarkers() { // Ida
   document.getElementById("doliste").innerHTML = "";
   toaletter.forEach(function(t) {
-    let style = 'style="color:black" onclick="popup(' + t.id + ')"';
-    if(!t.visible) style = 'style="color:grey"';
-    document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + style + " href='#'>" + t.adresse + "</a></li>";
+    let effect = 'onclick="popup(' + t.id + ')"';
+    if(!t.visible) effect = 'style="color:grey"';
+    document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + effect + " href='#'>" + t.adresse + "</a></li>";
   });
 }
 
@@ -100,8 +100,6 @@ function search() { // Ida og Sindre
   for(let i = 0; i < form.length; i++) {
     filter[form[i].id] = form[i].checked || Number(form[i].value);
   }
-
-  console.log(filter);
 
   getData(filter);
   updateMarkers();
