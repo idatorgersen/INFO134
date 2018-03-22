@@ -36,9 +36,10 @@ function updateMarkers() { // Sindre
   map.markers.forEach(function(marker) {
     marker.setMap(null);
   });
-  for(var i = 0; i < toaletter.length; i++) {
-    addMarker(toaletter[i]);
-  }
+
+  toaletter.forEach(function(t) {
+    if(t.visible) addMarker(t);
+  });
 }
 
 function addMarker(spot) { // Sindre
@@ -66,9 +67,11 @@ function addMarker(spot) { // Sindre
 
 function listMarkers() { // Ida
   document.getElementById("doliste").innerHTML = "";
-  for(var i = 0; i < toaletter.length; i++) {
-    document.getElementById("doliste").innerHTML += "<li><b>" + toaletter[i].id + ". </b><a href='#' onclick='popup(" + toaletter[i].id + ")'>" + toaletter[i].adresse + "</a></li>";
-  }
+  toaletter.forEach(function(t) {
+    let style = 'style="color:black" onclick="popup(' + t.id + ')"';
+    if(!t.visible) style = 'style="color:grey"';
+    document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + style + " href='#'>" + t.adresse + "</a></li>";
+  });
 }
 
 function popup(id) { // Sindre
@@ -92,28 +95,40 @@ function showSearch(){ // Ida
 
 function search() { // Ida og Sindre
   let form = document.getElementById("search");
-  let values = {};
+  let filter = {};
 
   for(let i = 0; i < form.length; i++) {
-    values[form[i].id] = form[i].checked || Number(form[i].value);
+    filter[form[i].id] = form[i].checked || Number(form[i].value);
   }
-  console.log(values);
-  getData(values);
+
+  console.log(filter);
+
+  getData(filter);
   updateMarkers();
   listMarkers();
 }
 
 function getData(filter) {
   if(!toaletter) toaletter = dokart["entries"];
+  for(let i in toaletter) toaletter[i].visible = true;
 
-  if(filter) {
-    toaletter = toaletter.filter(t => {
-      return (!filter.herre || Boolean(t.herre))
-        && (!filter.dame || Boolean(t.dame))
-        && (!filter.rullestol || Number(t.rullestol))
-        && (!filter.stellerom || Number(t.stellerom))
-        && (!filter.gratis || !Boolean(Number(t.pris)) || (t.pris === "NULL"))
-    });
-    //toaletter = toaletter.filter(t => t.kvinne = filter.kvinne);
-  }
+  if(filter) filterData(filter);
+}
+
+function filterData(filter) {
+  toaletter.forEach(function(t) {
+    console.log(t);
+    if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
+      t.visible = false;
+    } else if(filter.rullestol && t.rullestol != "1") {
+      t.visible = false;
+    } else if(filter.stellerom && t.stellerom != "1") {
+      t.visible = false;
+    } else if(filter.gratis && Number(t.pris) > 0) {
+      console.log(t.pris);
+      t.visible = false;
+    } else if(filter.makspris < Number(t.pris) && filter.makspris != 0) {
+      t.visible = false;
+    }
+  });
 }
