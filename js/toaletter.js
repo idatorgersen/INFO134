@@ -115,7 +115,6 @@ function getData(filter) {
 
 function filterData(filter) {
   toaletter.forEach(function(t) {
-    console.log(t);
     if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
       t.visible = false;
     } else if(filter.rullestol && t.rullestol != "1") {
@@ -123,7 +122,6 @@ function filterData(filter) {
     } else if(filter.stellerom && t.stellerom != "1") {
       t.visible = false;
     } else if(filter.gratis && Number(t.pris) > 0) {
-      console.log(t.pris);
       t.visible = false;
     } else if(filter.makspris < Number(t.pris) && filter.makspris != 0) {
       t.visible = false;
