@@ -104,7 +104,7 @@ function search() { // Ida og Sindre
 }
 
 function getData(filter) {
-  toaletter = dokart["entries"];
+  if(!toaletter) toaletter = dokart["entries"];
 
   if(filter) {
     toaletter = toaletter.filter(t => {
@@ -112,6 +112,7 @@ function getData(filter) {
         && (!filter.dame || Boolean(t.dame))
         && (!filter.rullestol || Number(t.rullestol))
         && (!filter.stellerom || Number(t.stellerom))
+        && (!filter.gratis || !Boolean(Number(t.pris)) || (t.pris === "NULL"))
     });
     //toaletter = toaletter.filter(t => t.kvinne = filter.kvinne);
   }
