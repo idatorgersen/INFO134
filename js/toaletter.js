@@ -15,6 +15,10 @@ var toaletter, map;
 }*/
 
 window.onload = function() { // Ida og Sindre
+  getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
+    console.log(response);
+  });
+
   currentdate = new Date();
   document.getElementById("hour").value = currentdate.getHours();
   document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2); //Legger til 0 foran tall 0-9. = 01,02 osv.
