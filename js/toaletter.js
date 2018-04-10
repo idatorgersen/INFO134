@@ -44,7 +44,9 @@ function updateMarkers() { // Sindre
 
 function addMarker(spot) { // Sindre
   let info = new google.maps.InfoWindow({
-    content: spot.adresse
+    content: "<b>" + spot.plassering + "</b></br>" + spot.adresse + " </br></br><i>Åpningstider:</i></br>" +
+            "Man-fre: " + spot.tid_hverdag + "</br> Lør: " + spot.tid_lordag +
+            "</br> Søn: " + spot.tid_sondag
   });
 
   let marker = new google.maps.Marker({
