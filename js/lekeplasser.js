@@ -5,10 +5,19 @@ window.onload = function() {
     lekeplasser = response.entries;
     lekeplasser.forEach(function(lekeplass) {
       lekeplass.visible = true;
-    })
+    });
 
     updateMarkers();
-    listMarkers();
-  });
   })
+}
+function updateMarkers() {
+  map.markers.forEach(function(marker) {
+    marker.setMap(null);
+  });
+  lekeplasser.forEach(function(l) {
+    if(l.visible) {
+      let infoContent = "<b>" + l.navn + "</b>";
+      addMarker(l, infoContent);
+    }
+  });
 }
