@@ -8,7 +8,7 @@ window.onload = function() { // Ida og Sindre
     });
 
     updateMarkers();
-    listMarkers();
+    toiletList();
   });
 
   currentdate = new Date();
@@ -31,20 +31,13 @@ function updateMarkers() { // Sindre
   });
 }
 
-function listMarkers() { // Ida
+function toiletList() { // Ida
   document.getElementById("doliste").innerHTML = "";
   toaletter.forEach(function(t) {
-    let effect = 'onclick="popup(' + t.id + ')"';
+    let effect = 'onclick="triggerMarkerClick(' + t.id + ')"';
     if(!t.visible) effect = 'style="color:grey"';
     document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + effect + " href='#'>" + t.adresse + "</a></li>";
   });
-}
-
-function popup(id) { // Sindre
-  let ourMarker = map.markers.find(function(marker) {
-    if(marker.label == id) return marker;
-  });
-  google.maps.event.trigger(ourMarker, 'click');
 }
 
 function showSearch(){ // Ida
@@ -67,12 +60,12 @@ function search() { // Ida og Sindre
     filter[form[i].id] = form[i].checked || Number(form[i].value);
   }
 
-  filterData(filter);
+  toiletFilter(filter);
   updateMarkers();
-  listMarkers();
+  toiletList();
 }
 
-function filterData(filter) {
+function toiletFilter(filter) {
   toaletter.forEach(function(t) {
     if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
       t.visible = false;

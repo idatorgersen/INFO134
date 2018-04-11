@@ -42,3 +42,10 @@ function addMarker(spot, infoContent) { // Sindre
     this.infowindow.open(map, marker);
   });
 }
+
+function triggerMarkerClick(id) { // Sindre
+  let targetMarker = map.markers.find(function(marker) {
+    if(marker.label == id) return marker;
+  });
+  google.maps.event.trigger(targetMarker, 'click');
+}
