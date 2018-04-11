@@ -1,12 +1,11 @@
 var toaletter;
 
-
 window.onload = function() { // Ida og Sindre
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
     toaletter = response.entries;
     toaletter.forEach(function(toalett) {
       toalett.visible = true;
-    })
+    });
 
     updateMarkers();
     listMarkers();
@@ -23,32 +22,12 @@ function updateMarkers() { // Sindre
   });
 
   toaletter.forEach(function(t) {
-    if(t.visible) addMarker(t);
-  });
-}
-
-function addMarker(spot) { // Sindre
-  let info = new google.maps.InfoWindow({
-    content: "<b>" + spot.plassering + "</b></br>" + spot.adresse + " </br></br><i>Åpningstider:</i></br>" +
-            "Man-fre: " + spot.tid_hverdag + "</br> Lør: " + spot.tid_lordag +
-            "</br> Søn: " + spot.tid_sondag
-  });
-
-  let marker = new google.maps.Marker({
-    position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
-    title: spot.id,
-    label: spot.id,
-    map: map,
-    infowindow: info
-  });
-
-  map.markers.push(marker);
-
-  marker.addListener('click', function() {
-    map.markers.forEach(function(marker) {
-      marker.infowindow.close(map, marker)
-    });
-    this.infowindow.open(map, marker);
+    if(t.visible) {
+      let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i></br>" +
+              "Man-fre: " + t.tid_hverdag + "</br> Lør: " + t.tid_lordag +
+              "</br> Søn: " + t.tid_sondag;
+      addMarker(t, infoContent);
+    }
   });
 }
 
