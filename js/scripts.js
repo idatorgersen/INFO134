@@ -1,3 +1,5 @@
+let map; 
+
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.overrideMimeType('application/json');
@@ -12,4 +14,12 @@ function getJSON(url, callback) {
     }
   };
   xhr.send();
+}
+
+function initMap() { // Google
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: new google.maps.LatLng(60.395053,5.319800),
+    markers: []
+  });
 }
