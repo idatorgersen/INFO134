@@ -4,8 +4,10 @@ var toaletter;
 window.onload = function() { // Ida og Sindre
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
     toaletter = response.entries;
+    toaletter.forEach(function(toalett) {
+      toalett.visible = true;
+    })
 
-    getData();
     updateMarkers();
     listMarkers();
   });
@@ -86,15 +88,9 @@ function search() { // Ida og Sindre
     filter[form[i].id] = form[i].checked || Number(form[i].value);
   }
 
-  getData(filter);
+  filterData(filter);
   updateMarkers();
   listMarkers();
-}
-
-function getData(filter) {
-  for(let i in toaletter) toaletter[i].visible = true;
-
-  if(filter) filterData(filter);
 }
 
 function filterData(filter) {
