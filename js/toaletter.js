@@ -1,31 +1,19 @@
-var toaletter, map;
+var toaletter, map, dokart;
 
-/*window.onload = function startProgram()
-{
-  var xhr = new XMLHttpRequest();
-  var url="http://hotell.difi.no/api/json/bergen/dokart?";
-  xhr.open("GET", url);
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState ===4 && xhr.status === 200){
-      console.log("Type", xhr.getResponseHeader("Content-Type"));
-      console.log("Text", xhr.responseText);
-    }
-  };
-  xhr.send();
-}*/
 
 window.onload = function() { // Ida og Sindre
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
     console.log(response);
+    dokart = response;
+
+    getData();
+    updateMarkers();
+    listMarkers();
   });
 
   currentdate = new Date();
   document.getElementById("hour").value = currentdate.getHours();
   document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2); //Legger til 0 foran tall 0-9. = 01,02 osv.
-
-  getData();
-  updateMarkers();
-  listMarkers();
 }
 
 function initMap() { // Google
@@ -54,7 +42,7 @@ function addMarker(spot) { // Sindre
   });
 
   let marker = new google.maps.Marker({
-    position: {lat: spot.latitude, lng: spot.longitude},
+    position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
     title: spot.id,
     label: spot.id,
     map: map,
