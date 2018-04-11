@@ -1,4 +1,4 @@
-let map; 
+let map;
 
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -21,5 +21,24 @@ function initMap() { // Google
     zoom: 14,
     center: new google.maps.LatLng(60.395053,5.319800),
     markers: []
+  });
+}
+
+function addMarker(spot, infoContent) { // Sindre
+  let marker = new google.maps.Marker({
+    position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
+    title: spot.id,
+    label: spot.id,
+    map: map,
+    infowindow: new google.maps.InfoWindow({ content: infoContent })
+  });
+
+  map.markers.push(marker);
+
+  marker.addListener('click', function() {
+    map.markers.forEach(function(marker) {
+      marker.infowindow.close(map, marker)
+    });
+    this.infowindow.open(map, marker);
   });
 }
