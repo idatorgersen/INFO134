@@ -81,3 +81,18 @@ function toiletFilter(filter) {
     }
   });
 }
+
+function hurtigsok() {
+    var searchText = document.getElementById("searchField");
+    var searchValue = searchText.value;
+
+    var criteria = 
+
+    var result = criteria.test(searhValue);
+
+    if (criteria == true) {
+	     return result;
+    }else{
+      return false;
+    }
+}
