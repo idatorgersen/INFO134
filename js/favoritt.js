@@ -2,13 +2,14 @@ let lekeplasser, toaletter;
 
 window.onload = function() {
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
-    lekeplasser = response.entries;
+    lekeplasser = response;
 
     getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
-      toaletter = response.entries;
+      toaletter = response;
       createOptions();
     });
   });
+  updateMarkers();
 }
 
 function createOptions() {
@@ -22,4 +23,9 @@ function createOptions() {
   document.getElementById("favourite").onchange = function() {
     addMarker(toaletter[this.value], null, {});
   }
+}
+function updateMarkers() { // Sindre
+  map.markers.forEach(function(marker) {
+    marker.setMap(null);
+  });
 }

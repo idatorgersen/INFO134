@@ -1,11 +1,7 @@
-var toaletter;
 
 window.onload = function() { // Ida og Sindre
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
-    toaletter = response.entries;
-    toaletter.forEach(function(toalett) {
-      toalett.visible = true;
-    });
+    data = response;
 
     updateMarkers();
     toiletList();
@@ -21,7 +17,7 @@ function updateMarkers() { // Sindre
     marker.setMap(null);
   });
 
-  toaletter.forEach(function(t) {
+  data.forEach(function(t) {
     if(t.visible) {
       let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i>" +
               "</br>Man-fre: " + ((t.tid_hverdag == "NULL") ? "STENGT" : t.tid_hverdag) +
@@ -34,7 +30,7 @@ function updateMarkers() { // Sindre
 
 function toiletList() { // Ida
   document.getElementById("doliste").innerHTML = "";
-  toaletter.forEach(function(t) {
+  data.forEach(function(t) {
     let effect = 'onclick="triggerMarkerClick(' + t.id + ')"';
     if(!t.visible) effect = 'style="color:grey"';
     document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + effect + " href='#'>" + t.adresse + "</a></li>";
@@ -67,7 +63,7 @@ function search() { // Ida og Sindre
 }
 
 function toiletFilter(filter) {
-  toaletter.forEach(function(t) {
+  data.forEach(function(t) {
     if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
       t.visible = false;
     } else if(filter.rullestol && t.rullestol != "1") {

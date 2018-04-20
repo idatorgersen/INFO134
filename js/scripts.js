@@ -1,4 +1,4 @@
-let map;
+let map, data;
 
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -7,7 +7,11 @@ function getJSON(url, callback) {
   xhr.onreadystatechange = function() {
     if(xhr.readyState === 4 && xhr.status === 200) {
       if(xhr.getResponseHeader("Content-Type").match(/application[/]json/g)) {
-        callback(JSON.parse(xhr.responseText));
+        let jsonResponse = JSON.parse(xhr.responseText).entries;
+        jsonResponse.forEach(function(item) {
+          item.visible = true;
+        });
+        callback(jsonResponse);
       } else {
         callback(null);
       }
