@@ -62,8 +62,8 @@ h2, h3 {
 }
 
 nav {
-  width: 30%;
-  min-width: 400px;
+  width: 40%;
+  min-width: 500px;
 
   justify-content: space-between;
   display: flex;
