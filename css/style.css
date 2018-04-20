@@ -109,6 +109,10 @@ aside#kart{
   width:500px;
 }
 
+article#wide{
+  width: 100%;
+}
+
 .toptext input[type=text] {
     padding: 6px;
     margin-top: 8px;

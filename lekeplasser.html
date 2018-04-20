@@ -26,14 +26,13 @@
     </div>
     <div class="flex flex-wrap center">
       <div class="flex main">
-        <article class="flex">
-          <h2>Lekeplasser i Bergen</h2>
-
+        <article class="flex" id="wide">
+          <h2>Lekeplasser i Bergen</h2><br/>
+          <div class="flex" id="kart">
+              <div id="map"></div>
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
+          </div>
         </article>
-        <aside class="flex" id="kart">
-            <div id="map"></div>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
-        </aside>
       </div>
       <hr style="width:100%">
       <footer class="flex">
