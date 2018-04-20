@@ -18,4 +18,8 @@ function createOptions() {
     opt.innerHTML = toaletter[i].adresse;
     document.getElementById("favourite").appendChild(opt);
   }
+
+  document.getElementById("favourite").onchange = function() {
+    addMarker(toaletter[this.value], null, {});
+  }
 }

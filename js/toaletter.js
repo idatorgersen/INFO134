@@ -27,7 +27,7 @@ function updateMarkers() { // Sindre
               "</br>Man-fre: " + ((t.tid_hverdag == "NULL") ? "STENGT" : t.tid_hverdag) +
               "</br> Lør: " + ((t.tid_lordag == "NULL") ? "STENGT" : t.tid_lordag) +
               "</br> Søn: " + ((t.tid_sondag == "NULL") ? "STENGT" : t.tid_sondag);
-      addMarker(t, infoContent);
+      addMarker(t, {label: t.id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
     }
   });
 }

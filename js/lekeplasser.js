@@ -17,7 +17,7 @@ function updateMarkers() {
   lekeplasser.forEach(function(l) {
     if(l.visible) {
       let infoContent = "<b>" + l.navn + "</b>";
-      addMarker(l, infoContent);
+      addMarker(l, {label: l.id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
     }
   });
 }

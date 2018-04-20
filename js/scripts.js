@@ -24,14 +24,12 @@ function initMap() { // Google
   });
 }
 
-function addMarker(spot, infoContent) { // Sindre
-  let marker = new google.maps.Marker({
+function addMarker(spot, params) { // Sindre
+  let marker = new google.maps.Marker(Object.assign({}, {
     position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
     title: spot.id,
-    label: spot.id,
-    map: map,
-    infowindow: new google.maps.InfoWindow({ content: infoContent })
-  });
+    map: map
+  }, params));
 
   map.markers.push(marker);
 
