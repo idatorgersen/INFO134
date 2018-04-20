@@ -23,9 +23,10 @@ function updateMarkers() { // Sindre
 
   toaletter.forEach(function(t) {
     if(t.visible) {
-      let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i></br>" +
-              "Man-fre: " + t.tid_hverdag + "</br> Lør: " + t.tid_lordag +
-              "</br> Søn: " + t.tid_sondag;
+      let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i>" +
+              "</br>Man-fre: " + ((t.tid_hverdag == "NULL") ? "STENGT" : t.tid_hverdag) +
+              "</br> Lør: " + ((t.tid_lordag == "NULL") ? "STENGT" : t.tid_lordag) +
+              "</br> Søn: " + ((t.tid_sondag == "NULL") ? "STENGT" : t.tid_sondag);
       addMarker(t, infoContent);
     }
   });
