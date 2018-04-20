@@ -83,16 +83,8 @@ function toiletFilter(filter) {
 }
 
 function hurtigsok() {
-    var searchText = document.getElementById("searchField");
-    var searchValue = searchText.value;
+    let regex = /(.*?)( kjønn:(mann|kvinne)| rullestol:(ja|nei)| åpen:((ja|nei)|(\d\d:\d\d))| stellerom:(ja|nei)| makspris:(\d+)| gratis:(ja|nei))/;
+    var searchText = document.getElementById("searchField").value;
 
-    var criteria = 
-
-    var result = criteria.test(searhValue);
-
-    if (criteria == true) {
-	     return result;
-    }else{
-      return false;
-    }
+    console.log(searchText.match(regex));
 }
