@@ -51,8 +51,8 @@ function triggerMarkerClick(id) { // Sindre
 }
 
 function calculateDistance(c1, c2) {
-  let lat = Math.abs(c1.lat, c2.lat);
-  let lng = Math.abs(c1.lng, c2.lng);
+  let lat = Math.abs(c1.lat(), c2.lat());
+  let lng = Math.abs(c1.lng(), c2.lng());
 
   return Math.sqrt((lat * lat) + (lng * lng));
 }
