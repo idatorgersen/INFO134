@@ -51,7 +51,7 @@ function clearMarkers() {
   });
 }
 
-function listPositions(positions) {
+function listPositions(positions) { // Ida
   document.getElementById("posList").innerHTML = "";
 
   positions.forEach(function(p) {

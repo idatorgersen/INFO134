@@ -26,15 +26,6 @@ function updateMarkers() { // Sindre
   });
 }
 
-function toiletList() { // Ida
-  document.getElementById("doliste").innerHTML = "";
-  data.forEach(function(t) {
-    let effect = 'onclick="triggerMarkerClick(' + t.id + ')"';
-    if(!t.visible) effect = 'style="color:grey"';
-    document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + effect + " href='#'>" + t.adresse + "</a></li>";
-  });
-}
-
 function showSearch(){ // Ida
 	var x = document.getElementById('search');
     if (x.style.display == 'block')
