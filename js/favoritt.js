@@ -26,7 +26,7 @@ function createOptions() {
     lekeplasser.sort(function(a, b) {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
-    addMarker(t);
+    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'});
     addMarker(lekeplasser[0]);
 
     /*lekeplasser.forEach(function(a) {
