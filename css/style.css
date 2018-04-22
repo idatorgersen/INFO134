@@ -92,10 +92,10 @@ footer {
   justify-content: space-around;
 }
 
-#doliste{
+#posList{
   list-style-type: none;
 }
-#doliste a:hover{
+#posList a:hover{
   color: #BC1010;
   }
 

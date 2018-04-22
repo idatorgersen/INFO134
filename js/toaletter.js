@@ -4,7 +4,7 @@ window.onload = function() { // Ida og Sindre
     data = response;
 
     updateMarkers();
-    toiletList();
+    listPositions(data);
   });
 
   currentdate = new Date();
@@ -57,7 +57,7 @@ function search() { // Ida og Sindre
 
   toiletFilter(filter);
   updateMarkers();
-  toiletList();
+  listPositions(data);
 }
 
 function toiletFilter(filter) {

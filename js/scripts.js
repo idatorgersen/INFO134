@@ -51,6 +51,16 @@ function clearMarkers() {
   });
 }
 
+function listPositions(positions) {
+  document.getElementById("posList").innerHTML = "";
+
+  positions.forEach(function(p) {
+    let effect = 'onclick="triggerMarkerClick(' + p.id + ')"';
+    if(!p.visible) effect = 'style="color:grey"';
+    document.getElementById("posList").innerHTML += "<li><b>" + p.id + ". </b><a " + effect + " href='#'>" + (p.adresse || p.navn) + "</a></li>";
+  });
+}
+
 function triggerMarkerClick(id) { // Sindre
   let targetMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
