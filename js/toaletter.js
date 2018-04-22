@@ -13,10 +13,7 @@ window.onload = function() { // Ida og Sindre
 }
 
 function updateMarkers() { // Sindre
-  map.markers.forEach(function(marker) {
-    marker.setMap(null);
-  });
-
+  cleanMarkers();
   data.forEach(function(t) {
     if(t.visible) {
       let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i>" +

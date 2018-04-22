@@ -9,7 +9,6 @@ window.onload = function() {
       createOptions();
     });
   });
-  updateMarkers();
 }
 
 function createOptions() {
@@ -21,11 +20,7 @@ function createOptions() {
   }
 
   document.getElementById("favourite").onchange = function() {
+    cleanMarkers();
     addMarker(toaletter[this.value], null, {});
   }
-}
-function updateMarkers() { // Sindre
-  map.markers.forEach(function(marker) {
-    marker.setMap(null);
-  });
 }

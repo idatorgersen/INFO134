@@ -20,6 +20,12 @@ function getJSON(url, callback) {
   xhr.send();
 }
 
+function cleanMarkers(){
+  map.markers.forEach(function(marker) {
+    marker.setMap(null);
+  })
+}
+
 function initMap() { // Google
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
