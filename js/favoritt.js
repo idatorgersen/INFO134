@@ -9,7 +9,6 @@ window.onload = function() {
       createOptions();
     });
   });
-  updateMarkers();
 }
 
 function createOptions() {
@@ -21,11 +20,17 @@ function createOptions() {
   }
 
   document.getElementById("favourite").onchange = function() {
-    addMarker(toaletter[this.value], null, {});
+    clearMarkers();
+
+    let t = toaletter[this.value];
+    lekeplasser.sort(function(a, b) {
+      return calculateDistance(a, t) - calculateDistance(b, t);
+    });
+    addMarker(t);
+    addMarker(lekeplasser[0]);
+
+    /*lekeplasser.forEach(function(a) {
+      console.log(calculateDistance(a, t));
+    })*/
   }
-}
-function updateMarkers() { // Sindre
-  map.markers.forEach(function(marker) {
-    marker.setMap(null);
-  });
 }

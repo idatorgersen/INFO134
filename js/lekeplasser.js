@@ -6,9 +6,8 @@ window.onload = function() {
   })
 }
 function updateMarkers() {
-  map.markers.forEach(function(marker) {
-    marker.setMap(null);
-  });
+  clearMarkers();
+  
   data.forEach(function(l) {
     if(l.visible) {
       let infoContent = "<b>" + l.navn + "</b>";
