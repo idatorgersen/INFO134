@@ -1,5 +1,5 @@
-
 window.onload = function() {
+  // Kaller på getJSON i scripts.js for å hente datasett "dokart"
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
     data = response.entries;
     data.forEach(function(item) {
@@ -10,11 +10,18 @@ window.onload = function() {
     listPositions(data);
   });
 
+  /**
+   * Henter nåværende tidspunkt og legger det inn som standardvalør i søkefelt for klokkeslett
+   * Legger også til 0 foran tall 0-9. = 01,02 osv.
+   */
   currentdate = new Date();
   document.getElementById("hour").value = ("0" + currentdate.getHours()).substr(-2);
-  document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2); //Legger til 0 foran tall 0-9. = 01,02 osv.
+  document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2);
 }
 
+/**
+ * Funksjon som genererer markører på map basert på egenskapen "visible"
+ */
 function updateMarkers() {
   clearMarkers();
 
@@ -29,6 +36,7 @@ function updateMarkers() {
   });
 }
 
+// Funksjon som slår av/på visning av avansert søk
 function showSearch(){
 	var x = document.getElementById('search');
     if (x.style.display == 'block')
@@ -41,6 +49,10 @@ function showSearch(){
     }
 }
 
+/**
+ * Funksjon som kjøres når klient trykker "søk"
+ * Sender søkeparametre fra html-form videre til filter-funksjon
+ */
 function search() {
   let form = document.getElementById("search");
   let filter = {};
@@ -54,6 +66,10 @@ function search() {
   listPositions(data);
 }
 
+/**
+ * Funksjon som filtrerer synlige datapunkt basert på klientens valg i søkefeltene
+ * param: filter  objekt som inneholder søkeparametre fra html-form
+ */
 function toiletFilter(filter) {
   data.forEach(function(t) {
     if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
@@ -70,6 +86,7 @@ function toiletFilter(filter) {
   });
 }
 
+// Funksjon som skal filtrere basert på tekst-input ved hjelp av regex
 function hurtigsok() {
     let regex = /(.*?)( kjønn:(mann|kvinne)| rullestol:(ja|nei)| åpen:((ja|nei)|(\d\d:\d\d))| stellerom:(ja|nei)| makspris:(\d+)| gratis:(ja|nei))/;
     var searchText = document.getElementById("searchField").value;

@@ -1,9 +1,12 @@
+// Variabler som tar vare på datasettene som brukes på favoritt-siden
 let lekeplasser, toaletter;
 
 window.onload = function() {
+  // Kaller på getJSON i scripts.js for å hente datasett "lekeplasser"
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
     lekeplasser = response.entries;
 
+    // Kaller på getJSON i scripts.js for å hente datasett "dokart"
     getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
       toaletter = response.entries;
       createOptions();
@@ -11,6 +14,9 @@ window.onload = function() {
   });
 }
 
+/**
+ * Funksjon som genererer dropdown-meny (<select>) hvor man kan velge favoritt-toalett
+ */
 function createOptions() {
   for(let i = 0; i < toaletter.length; i++) {
     let opt = document.createElement("option");
@@ -19,6 +25,7 @@ function createOptions() {
     document.getElementById("favourite").appendChild(opt);
   }
 
+  // Her defineres en eventlistener som aktiveres når noe som helst endres i dropdown-menyen
   document.getElementById("favourite").onchange = function() {
     clearMarkers();
 
