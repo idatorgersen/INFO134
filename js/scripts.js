@@ -26,7 +26,7 @@ function cleanMarkers(){
   })
 }
 
-function initMap() { // Google
+function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: new google.maps.LatLng(60.395053,5.319800),
@@ -34,7 +34,7 @@ function initMap() { // Google
   });
 }
 
-function addMarker(spot, params) { // Sindre
+function addMarker(spot, params) {
   let marker = new google.maps.Marker(Object.assign({}, {
     position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
     title: spot.id,
@@ -57,7 +57,7 @@ function clearMarkers() {
   });
 }
 
-function listPositions(positions) { // Ida
+function listPositions(positions) {
   document.getElementById("posList").innerHTML = "";
 
   positions.forEach(function(p) {
@@ -67,7 +67,7 @@ function listPositions(positions) { // Ida
   });
 }
 
-function triggerMarkerClick(id) { // Sindre
+function triggerMarkerClick(id) {
   let targetMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
   });

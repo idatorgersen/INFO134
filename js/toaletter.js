@@ -1,5 +1,5 @@
 
-window.onload = function() { // Ida og Sindre
+window.onload = function() {
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
     data = response;
 
@@ -12,7 +12,7 @@ window.onload = function() { // Ida og Sindre
   document.getElementById("minute").value = ("0" + currentdate.getMinutes()).substr(-2); //Legger til 0 foran tall 0-9. = 01,02 osv.
 }
 
-function updateMarkers() { // Sindre
+function updateMarkers() {
   clearMarkers();
 
   data.forEach(function(t) {
@@ -26,7 +26,7 @@ function updateMarkers() { // Sindre
   });
 }
 
-function showSearch(){ // Ida
+function showSearch(){
 	var x = document.getElementById('search');
     if (x.style.display == 'block')
     {
@@ -38,7 +38,7 @@ function showSearch(){ // Ida
     }
 }
 
-function search() { // Ida og Sindre
+function search() {
   let form = document.getElementById("search");
   let filter = {};
 
