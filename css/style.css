@@ -156,6 +156,12 @@ table{
   text-align: center;
 }
 
+ul:before{
+    content:attr(aria-label);
+    font-weight:bold;
+    /*margin-left:-15px;*/
+}
+
 /* Nettbrett */
 @media all and (max-width: 800px){
   nav {
