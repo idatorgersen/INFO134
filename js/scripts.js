@@ -1,5 +1,10 @@
+// Globale variabler som tar vare på kart og datasett
 let map, data;
 
+/**
+ * Funksjon som henter JSON fra gitt url
+ * JSON-dokumentet tolkes og returneres til callback-funksjon
+ */
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.overrideMimeType('application/json');
@@ -20,12 +25,10 @@ function getJSON(url, callback) {
   xhr.send();
 }
 
-function cleanMarkers(){
-  map.markers.forEach(function(marker) {
-    marker.setMap(null);
-  })
-}
-
+/**
+ * Initialiseringsfunksjon for Google Maps
+ * Opprettet en referanse "markers" i map som tar vare på alle aktive markører i et array
+ */
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
@@ -34,29 +37,39 @@ function initMap() {
   });
 }
 
+/**
+ * Funksjon som legger til gitt markør til map
+ * Dersom infowindow er supplert som ekstra parameter legges det til en eventlistener for click-event
+ * param: spot    objekt som inneholder koordinater som latitude og longitude
+ * param: params  objekt som inneholder parametre for marker-objekt (valgfritt)
+ */
 function addMarker(spot, params) {
   let marker = new google.maps.Marker(Object.assign({}, {
     position: {lat: parseFloat(spot.latitude), lng: parseFloat(spot.longitude)},
     title: spot.id,
     map: map
   }, params));
-
   map.markers.push(marker);
 
-  marker.addListener('click', function() {
-    map.markers.forEach(function(marker) {
-      marker.infowindow.close(map, marker)
+  if(map.infowindow) {
+    marker.addListener('click', function() {
+      map.markers.forEach(function(marker) {
+        marker.infowindow.close(map, marker)
+      });
+      this.infowindow.open(map, marker);
     });
-    this.infowindow.open(map, marker);
-  });
+  }
 }
 
+// Funksjon som rydder bort alle markører fra map
 function clearMarkers() {
   map.markers.forEach(function(marker) {
     marker.setMap(null);
   });
+  map.markers = [];
 }
 
+// Funksjon som lager en liste basert på gitt samling av objekter
 function listPositions(positions) {
   document.getElementById("posList").innerHTML = "";
 
@@ -67,6 +80,10 @@ function listPositions(positions) {
   });
 }
 
+/**
+ * Funksjon som aktiverer click-event på gitt markør
+ * Brukes i posList, som en onclick-effekt ved bruk av listen
+ */
 function triggerMarkerClick(id) {
   let targetMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
@@ -74,6 +91,7 @@ function triggerMarkerClick(id) {
   google.maps.event.trigger(targetMarker, 'click');
 }
 
+// Funksjon som regner ut avstand mellom to koordinater ved hjelp av Pytagoras
 function calculateDistance(c1, c2) {
   let lat = Math.abs(c1.latitude - c2.latitude);
   let lng = Math.abs(c1.longitude - c2.longitude);
