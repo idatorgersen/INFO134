@@ -13,12 +13,8 @@ window.onload = function() { // Ida og Sindre
 }
 
 function updateMarkers() { // Sindre
-<<<<<<< HEAD
-  cleanMarkers();
-=======
   clearMarkers();
 
->>>>>>> 39c7e9b3984702ec137f339246e76e931d260af0
   data.forEach(function(t) {
     if(t.visible) {
       let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i>" +
