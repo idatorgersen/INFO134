@@ -20,7 +20,24 @@ function createOptions() {
   }
 
   document.getElementById("favourite").onchange = function() {
+<<<<<<< HEAD
     cleanMarkers();
     addMarker(toaletter[this.value], null, {});
+=======
+    clearMarkers();
+
+    let t = toaletter[this.value];
+    lekeplasser.sort(function(a, b) {
+      return calculateDistance(a, t) - calculateDistance(b, t);
+    });
+    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'});
+    addMarker(lekeplasser[0]);
+
+    listPositions(lekeplasser.slice(0, 10));
+
+    /*lekeplasser.forEach(function(a) {
+      console.log(calculateDistance(a, t));
+    })*/
+>>>>>>> 39c7e9b3984702ec137f339246e76e931d260af0
   }
 }

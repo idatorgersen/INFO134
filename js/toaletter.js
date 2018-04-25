@@ -4,7 +4,7 @@ window.onload = function() { // Ida og Sindre
     data = response;
 
     updateMarkers();
-    toiletList();
+    listPositions(data);
   });
 
   currentdate = new Date();
@@ -13,7 +13,12 @@ window.onload = function() { // Ida og Sindre
 }
 
 function updateMarkers() { // Sindre
+<<<<<<< HEAD
   cleanMarkers();
+=======
+  clearMarkers();
+
+>>>>>>> 39c7e9b3984702ec137f339246e76e931d260af0
   data.forEach(function(t) {
     if(t.visible) {
       let infoContent = "<b>" + t.plassering + "</b></br>" + t.adresse + " </br></br><i>Åpningstider:</i>" +
@@ -22,15 +27,6 @@ function updateMarkers() { // Sindre
               "</br> Søn: " + ((t.tid_sondag == "NULL") ? "STENGT" : t.tid_sondag);
       addMarker(t, {label: t.id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
     }
-  });
-}
-
-function toiletList() { // Ida
-  document.getElementById("doliste").innerHTML = "";
-  data.forEach(function(t) {
-    let effect = 'onclick="triggerMarkerClick(' + t.id + ')"';
-    if(!t.visible) effect = 'style="color:grey"';
-    document.getElementById("doliste").innerHTML += "<li><b>" + t.id + ". </b><a " + effect + " href='#'>" + t.adresse + "</a></li>";
   });
 }
 
@@ -56,7 +52,7 @@ function search() { // Ida og Sindre
 
   toiletFilter(filter);
   updateMarkers();
-  toiletList();
+  listPositions(data);
 }
 
 function toiletFilter(filter) {

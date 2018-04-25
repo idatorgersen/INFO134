@@ -51,6 +51,22 @@ function addMarker(spot, params) { // Sindre
   });
 }
 
+function clearMarkers() {
+  map.markers.forEach(function(marker) {
+    marker.setMap(null);
+  });
+}
+
+function listPositions(positions) { // Ida
+  document.getElementById("posList").innerHTML = "";
+
+  positions.forEach(function(p) {
+    let effect = 'onclick="triggerMarkerClick(' + p.id + ')"';
+    if(!p.visible) effect = 'style="color:grey"';
+    document.getElementById("posList").innerHTML += "<li><b>" + p.id + ". </b><a " + effect + " href='#'>" + (p.adresse || p.navn) + "</a></li>";
+  });
+}
+
 function triggerMarkerClick(id) { // Sindre
   let targetMarker = map.markers.find(function(marker) {
     if(marker.label == id) return marker;
@@ -59,8 +75,8 @@ function triggerMarkerClick(id) { // Sindre
 }
 
 function calculateDistance(c1, c2) {
-  let lat = Math.abs(c1.lat(), c2.lat());
-  let lng = Math.abs(c1.lng(), c2.lng());
+  let lat = Math.abs(c1.latitude - c2.latitude);
+  let lng = Math.abs(c1.longitude - c2.longitude);
 
   return Math.sqrt((lat * lat) + (lng * lng));
 }

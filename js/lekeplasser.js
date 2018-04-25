@@ -6,6 +6,11 @@ window.onload = function() {
   })
 }
 function updateMarkers() {
+<<<<<<< HEAD
+=======
+  clearMarkers();
+  
+>>>>>>> 39c7e9b3984702ec137f339246e76e931d260af0
   data.forEach(function(l) {
     if(l.visible) {
       let infoContent = "<b>" + l.navn + "</b>";
