@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/flex.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/barnehager.js"></script>
     <title>Studentassistenten</title>
   </head>
   <body class="flex">
@@ -19,27 +20,18 @@
           <a href="lekeplasser.html">Lekeplasser</a>
           <a href="toaletter.html">Toaletter</a>
           <a href="favoritt-toalett.html">Favoritt-toalett</a>
-          <a href="barnehager.html">Barnehager</a>
-          <a href="kontakt.html" id="current">Kontakt</a>
+          <a href="barnehager.html" id="current">Barnehager</a>
+          <a href="kontakt.html">Kontakt</a>
         </nav>
       </header>
     </div>
     <div class="flex flex-wrap center">
-      <article class="flex">
-        <form name="kontakt" action="" method="post">
-          <h3>Hva gjelder det?</h3>
-          <input type="radio" name="category" value="arrangement" />Arrangementer <br />
-          <input type="radio" name="category" value="feil" />Feil på siden <br />
-          <input type="radio" name="category" value="presse" />Presse <br />
-          <input type="radio" name="category" value="annet" />Annet <br />
-          <br />
-          <input type="text" name="name" size="50" placeholder="Navn" /><br /><br />
-          <input type="text" name="email" size="50" placeholder="E-mail" /><br />
-          <br />
-          <textarea name="message" rows="10" cols="48" placeholder="Skriv din melding her..."></textarea><br />
-          <input type="submit" class="searchButton" value="Send inn" />
-        </form>
-      </article>
+      <div class="flex main">
+        <article class="flex" id="wide">
+          <h2>Barnehager i Bergen</h2><br/>
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxfVYalIH-o0SEI7LPHetR6YYmtMgrtAo&callback=initMap"></script>
+        </article>
+      </div>
       <hr style="width:100%">
       <footer class="flex">
         <a href="om.html">Om Studentassistenten</a>
