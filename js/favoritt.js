@@ -26,9 +26,10 @@ function createOptions() {
     lekeplasser.sort(function(a, b) {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
-    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'});
+    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', infowindow: new google.maps.InfoWindow({ content: "" })});
     for(var i = 0; i<5; i++){
-      addMarker(lekeplasser[i]);
+      let infoContent = "<b>" + lekeplasser[i].navn + "</b>";
+      addMarker(lekeplasser[i], {label: lekeplasser[i].id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
     }
 
     listPositions(lekeplasser.slice(0, 5));
