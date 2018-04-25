@@ -1,10 +1,15 @@
 window.onload = function() {
+  // Kaller på getJSON i scripts.js for å hente datasett "lekeplasser"
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
     data = response;
 
     updateMarkers();
   })
 }
+
+/**
+ * Funksjon som genererer markører på map basert på egenskapen "visible"
+ */
 function updateMarkers() {
   clearMarkers();
 
