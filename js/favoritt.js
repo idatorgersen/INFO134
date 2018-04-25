@@ -27,9 +27,11 @@ function createOptions() {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
     addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'});
-    addMarker(lekeplasser[0]);
+    for(var i = 0; i<10; i++){
+      addMarker(lekeplasser[i]);
+    }
 
-    listPositions(lekeplasser.slice(0, 10));
+    listPositions(lekeplasser.slice(0, 5));
 
     /*lekeplasser.forEach(function(a) {
       console.log(calculateDistance(a, t));
