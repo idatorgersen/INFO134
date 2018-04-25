@@ -5,10 +5,17 @@ window.onload = function() {
   // Kaller på getJSON i scripts.js for å hente datasett "lekeplasser"
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
     lekeplasser = response.entries;
+    lekeplasser.forEach(function(item) {
+      item.visible = true;
+    });
 
     // Kaller på getJSON i scripts.js for å hente datasett "dokart"
     getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
       toaletter = response.entries;
+      toaletter.forEach(function(item) {
+        item.visible = true;
+      });
+      
       createOptions();
     });
   });
