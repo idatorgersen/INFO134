@@ -158,7 +158,7 @@ table{
 
 ul:before{
     content:attr(aria-label);
-    font-weight:bold;
+    font-style: italic;
     /*margin-left:-15px;*/
 }
 

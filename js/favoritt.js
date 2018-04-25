@@ -15,7 +15,7 @@ function createOptions() {
   for(let i = 0; i < toaletter.length; i++) {
     let opt = document.createElement("option");
     opt.value = i;
-    opt.innerHTML = toaletter[i].adresse;
+    opt.innerHTML = toaletter[i].id + ". " + toaletter[i].adresse;
     document.getElementById("favourite").appendChild(opt);
   }
 
@@ -27,7 +27,7 @@ function createOptions() {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
     addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'});
-    for(var i = 0; i<10; i++){
+    for(var i = 0; i<5; i++){
       addMarker(lekeplasser[i]);
     }
 
