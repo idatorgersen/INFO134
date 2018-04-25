@@ -1,6 +1,6 @@
 window.onload = function() {
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
-    data = response;
+    data = response.entries;
 
     updateMarkers();
   })

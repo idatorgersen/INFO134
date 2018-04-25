@@ -1,7 +1,10 @@
 
 window.onload = function() {
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
-    data = response;
+    data = response.entries;
+    data.forEach(function(item) {
+      item.visible = true;
+    });
 
     updateMarkers();
     listPositions(data);

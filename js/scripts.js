@@ -7,10 +7,7 @@ function getJSON(url, callback) {
   xhr.onreadystatechange = function() {
     if(xhr.readyState === 4 && xhr.status === 200) {
       if(xhr.getResponseHeader("Content-Type").match(/application[/]json/g)) {
-        let jsonResponse = JSON.parse(xhr.responseText).entries;
-        jsonResponse.forEach(function(item) {
-          item.visible = true;
-        });
+        let jsonResponse = JSON.parse(xhr.responseText);
         callback(jsonResponse);
       } else {
         callback(null);

@@ -2,10 +2,10 @@ let lekeplasser, toaletter;
 
 window.onload = function() {
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
-    lekeplasser = response;
+    lekeplasser = response.entries;
 
     getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {
-      toaletter = response;
+      toaletter = response.entries;
       createOptions();
     });
   });
