@@ -27,15 +27,13 @@ function createOptions() {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
     addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', infowindow: new google.maps.InfoWindow({ content: "" })});
-    for(var i = 0; i<5; i++){
-      let infoContent = "<b>" + lekeplasser[i].navn + "</b>";
-      addMarker(lekeplasser[i], {label: lekeplasser[i].id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
-    }
 
-    listPositions(lekeplasser.slice(0, 5));
+    closestLekeplasser = lekeplasser.slice(0, 5);
+    closestLekeplasser.forEach(function(l) {
+      let infoContent = "<b>" + l.navn + "</b>";
+      addMarker(l, {label: l.id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
+    });
 
-    /*lekeplasser.forEach(function(a) {
-      console.log(calculateDistance(a, t));
-    })*/
+    listPositions(closestLekeplasser);
   }
 }
