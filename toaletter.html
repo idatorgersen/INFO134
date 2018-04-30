@@ -27,10 +27,15 @@
     </div>
     <div class="flex flex-wrap center">
       <div class="flex main">
-        <article class="flex ">
+        <article class="flex">
           <section class="toptext">
             <h2> Toaletter i Bergen </h2>
             <input onkeydown="if(event.keyCode == 13) { hurtigsok(); }" type="text" placeholder="Hurtigsøk.." id="searchField">
+          </section>
+          <br />
+          <ul id="posList" aria-label="Oversikt over toaletter i Bergen"></ul>
+          <br />
+          <section>
             <button onclick="showSearch()" class="advancedButton">Avansert søk</button>
             <form id="search">
               <table><br />
@@ -41,7 +46,6 @@
                         <input type="radio" name="kjønn" id="herre" value="0">Mann
                       </label>
                     </td>
-
                 </legend>
                 <td>
                   <label name="rullestol">
@@ -54,7 +58,6 @@
                   </label>
                 </td>
                 </tr>
-
                 <legend name="kjønn">
                   <tr>
                     <td>
@@ -74,7 +77,6 @@
                   </label>
                 </td>
               </tr>
-
               </table>
               <table>
                 <tr>
@@ -92,8 +94,6 @@
             <button type="button" form="search" onclick="search()" class="searchButton">Søk</button>
             </form>
           </section>
-          <br />
-          <ul id="posList" aria-label="Oversikt over toaletter i Bergen"></ul>
         </article>
         <aside class="flex" id="kart">
           <div id="map"></div>
