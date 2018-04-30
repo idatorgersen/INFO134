@@ -90,9 +90,7 @@ footer {
   justify-content: space-around;
 }
 
-#posList{
-  list-style-type: none;
-}
+
 #posList a:hover{
   color: #BC1010;
   }
@@ -154,7 +152,7 @@ table{
   text-align: center;
 }
 
-ul:before{
+ul:before, ol:before{
     content:attr(aria-label);
     font-style: italic;
     /*margin-left:-15px;*/

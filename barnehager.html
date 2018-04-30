@@ -29,7 +29,7 @@
       <div class="flex main">
         <article class="flex" id="wide">
           <h2>Barnehager i Bergen</h2><br/>
-            <table>
+            <table id="barnehagefilter">
               <tr>
                 <td>
                   <p>Barnehagens kapasitet:</p>
@@ -42,14 +42,14 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="10">
-                      <input type="radio" name="antallBarn" id="10" value="0">10
+                      <input type="radio" name="antallBarn" value="10" onchange="maks(value)">10
                     </label>
                   </td>
                 </legend>
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="kapasitet" id="privat" value="0">Privat
+                      <input type="radio" name="eierform" id="privat" value="Privat" onchange="eier(value)">Privat
                     </label>
                   </td>
                 </legend>
@@ -58,14 +58,14 @@
                 <legend name="antallBarn">
                     <td>
                       <label name="antallBarn">
-                        <input type="radio" name="antallBarn" id="25" value="0">25
+                        <input type="radio" name="antallBarn" value="25" onchange="maks(value)">25
                       </label>
                     </td>
                 </legend>
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="kapasitet" id="kommunal" value="0">Offentlig
+                      <input type="radio" name="eierform" id="kommunal" value="Kommunal" onchange="eier(value)">Offentlig
                     </label>
                   </td>
                 </legend>
@@ -74,7 +74,7 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="antallBarn">
-                      <input type="radio" name="antallBarn" id="50" value="0">50
+                      <input type="radio" name="antallBarn" value="50" onchange="maks(value)">50
                     </label>
                   </td>
                 </legend>
@@ -83,13 +83,13 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="antallBarn">
-                      <input type="radio" name="antallBarn" id="100" value="0">100+
+                      <input type="radio" name="antallBarn" value="100" onchange="maks(value)">100+
                     </label>
                   </td>
                 </legend>
               </tr>
             </table>
-          <ul id="posList search" aria-label="Oversikt over barnehager i Bergen"></ul>
+          <ol id="posList" aria-label="Oversikt over barnehager i Bergen"></ol>
         </article>
       </div>
       <hr style="width:100%">

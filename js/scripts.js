@@ -72,8 +72,8 @@ function listPositions(positions) {
 
   positions.forEach(function(p) {
     let effect = 'onclick="triggerMarkerClick(' + p.id + ')"';
-    if(!p.visible) effect = 'style="color:grey"';
-    document.getElementById("posList").innerHTML += "<li><b>" + p.id + ". </b><a " + effect + " href='#'>" + (p.adresse || p.navn) + "</a></li>";
+    if(!p.visible && p.visible !== undefined) effect = 'style="color:grey"';
+    document.getElementById("posList").innerHTML += "<li><a " + effect + " href='#'>" + (p.adresse || p.navn) + "</a></li>";
   });
 }
 
