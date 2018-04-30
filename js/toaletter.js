@@ -71,7 +71,23 @@ function search() {
  * param: filter  objekt som inneholder søkeparametre fra html-form
  */
 function toiletFilter(filter) {
+  let today = new Date().getDay();
+  if(today == 0) {
+    today = "tid_sondag";
+  } else if(today == 6) {
+    today = "tid_lordag";
+  } else {
+    today = "tid_hverdag";
+  }
+
   data.forEach(function(t) {
+    let open, opens, closes;
+    open = t[today].split(" - ");
+    if(open.length > 1) {
+      opens = open[0].split(".").map(Number);
+      closes = open[1].split(".").map(Number);
+    }
+
     if((filter.herre && !Boolean(t.herre)) || (filter.dame && !Boolean(t.dame))) {
       t.visible = false;
     } else if(filter.rullestol && t.rullestol != "1") {
@@ -82,8 +98,12 @@ function toiletFilter(filter) {
       t.visible = false;
     } else if(filter.makspris < Number(t.pris) && filter.makspris != 0) {
       t.visible = false;
+    } else if(opens && (filter.hour < opens[0] || (filter.hour == opens[0] && filter.minute < opens[1]))) {
+      t.visible = false;
+    } else if(closes && (filter.hour > closes[0] || (filter.hour == closes[0] && filter.minute > closes[1]))) {
+      t.visible = false;
     } else {
-      t.visible = true; 
+      t.visible = true;
     }
   });
 }
