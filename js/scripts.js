@@ -48,7 +48,7 @@ function addMarker(spot, params) {
   }, params));
   map.markers.push(marker);
 
-  if(map.infowindow) {
+  if(marker.infowindow) {
     marker.addListener('click', function() {
       map.markers.forEach(function(marker) {
         marker.infowindow.close(map, marker)
