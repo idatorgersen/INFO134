@@ -17,14 +17,14 @@ function maks(value){
 
 function refresh(){
   var liste = data.filter(function(b){
-      if(eier && b.eierform !== eier){
-        return true;
-      }
-      if (b.antallBarn < kapasitet){
-        return true;
-      }
-      console.log(b.eierform);
+    if(eier && b.eierform !== eier){
       return false;
+    }
+    if (b.antallBarn > kapasitet){
+      return false;
+    }
+    return true;
   });
+  console.log(liste[0])
   listPositions(liste);
 }
