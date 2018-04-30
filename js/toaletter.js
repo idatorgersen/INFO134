@@ -82,6 +82,8 @@ function toiletFilter(filter) {
       t.visible = false;
     } else if(filter.makspris < Number(t.pris) && filter.makspris != 0) {
       t.visible = false;
+    } else {
+      t.visible = true; 
     }
   });
 }
