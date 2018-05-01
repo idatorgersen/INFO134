@@ -28,20 +28,20 @@
     <div class="flex flex-wrap center">
       <div class="flex main">
         <article class="flex" id="wide">
-          <h2>Barnehager i Bergen</h2><br/>
-            <table id="barnehagefilter">
+          <h2>Barnehager i Bergen</h2>
+            <table>
               <tr>
                 <td>
-                  <p>Barnehagens kapasitet:</p>
+                  Barnehagens kapasitet:
                 </td>
                 <td>
-                  <p>Barnehagens eierform:</p>
+                  Barnehagens eierform:
                 </td>
               </tr>
               <tr>
                 <legend name="antallBarn">
                   <td>
-                    <label name="10">
+                    <label name="antallBarn">
                       <input type="radio" name="antallBarn" value="10" onchange="maks(value)">10
                     </label>
                   </td>
@@ -49,7 +49,7 @@
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="eierform" id="privat" value="Privat" onchange="eier(value)">Privat
+                      <input type="radio" name="eierform" value="Privat" onchange="eier(value)">Privat
                     </label>
                   </td>
                 </legend>
@@ -65,7 +65,7 @@
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="eierform" id="kommunal" value="Kommunal" onchange="eier(value)">Offentlig
+                      <input type="radio" name="eierform" value="Kommunal" onchange="eier(value)">Offentlig
                     </label>
                   </td>
                 </legend>
