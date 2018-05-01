@@ -1,4 +1,4 @@
-//Oppgave 3, 5
+//Oppgave 3
 
 window.onload = function() {
   // Kaller på getJSON i scripts.js for å hente datasett "dokart"

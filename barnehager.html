@@ -42,14 +42,14 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="antallBarn">
-                      <input type="radio" name="antallBarn" value="10" onchange="maks(value)">10
+                      <input type="radio" name="antallBarn" value="10" onclick="maks(value)">Under 10 barn
                     </label>
                   </td>
                 </legend>
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="eierform" value="Privat" onchange="eier(value)">Privat
+                      <input type="radio" name="eierform" value="Privat" onclick="eier(value)">Privat
                     </label>
                   </td>
                 </legend>
@@ -58,14 +58,14 @@
                 <legend name="antallBarn">
                     <td>
                       <label name="antallBarn">
-                        <input type="radio" name="antallBarn" value="25" onchange="maks(value)">25
+                        <input type="radio" name="antallBarn" value="25" onclick="maks(value)">10-25 barn
                       </label>
                     </td>
                 </legend>
                 <legend name="eierform">
                   <td>
                     <label name="eierform">
-                      <input type="radio" name="eierform" value="Kommunal" onchange="eier(value)">Offentlig
+                      <input type="radio" name="eierform" value="Kommunal" onclick="eier(value)">Offentlig
                     </label>
                   </td>
                 </legend>
@@ -74,7 +74,7 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="antallBarn">
-                      <input type="radio" name="antallBarn" value="50" onchange="maks(value)">50
+                      <input type="radio" name="antallBarn" value="50" onclick="maks(value)">25-50 barn
                     </label>
                   </td>
                 </legend>
@@ -83,13 +83,22 @@
                 <legend name="antallBarn">
                   <td>
                     <label name="antallBarn">
-                      <input type="radio" name="antallBarn" value="10000" onchange="maks(value)">100+
+                      <input type="radio" name="antallBarn" value="75" onclick="maks(value)">50-100 barn
+                    </label>
+                  </td>
+                </legend>
+              </tr>
+              <tr>
+                <legend name="antallBarn">
+                  <td>
+                    <label name="antallBarn">
+                      <input type="radio" name="antallBarn" value="300" onclick="maks(value)">Over 100 barn
                     </label>
                   </td>
                 </legend>
               </tr>
             </table>
-          <ol id="posList" aria-label="Oversikt over barnehager i Bergen"></ol>
+          <ol id="posList"></ol>
         </article>
       </div>
       <hr style="width:100%">

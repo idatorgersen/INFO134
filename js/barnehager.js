@@ -1,5 +1,4 @@
 //Oppgave 10
-
 var eier, kapasitet;
 
 window.onload = function() {
@@ -24,11 +23,21 @@ function refresh(){
   var liste = data.filter(function(b){
     if(eier && b.eierform !== eier){
       return false;
-    }
-    if(kapasitet && b.antallBarn > kapasitet){
+    }if(b.antallBarn == undefined){
       return false;
-    }else if(b.antallBarn == undefined){
-      return null;
+    }else if(kapasitet && b.antallBarn > kapasitet){
+      return false;
+    }
+    if(kapasitet == 10){
+      return b.antallBarn < 10;
+    }else if(kapasitet == 25){
+      return b.antallBarn > 10 && b.antallBarn < 25;
+    } else if(kapasitet == 50){
+      return b.antallBarn > 25 && b.antallBarn < 50;
+    } else if(kapasitet == 75){
+      return b.antallBarn > 50 && b.antallBarn < 100;
+    }else if(kapasitet == 300){
+      return b.antallBarn > 100 && b.antallBarn < 500;
     }
     return true;
   });
