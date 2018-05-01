@@ -1,3 +1,5 @@
+//Oppgave 10
+
 var eier, kapasitet;
 
 window.onload = function() {

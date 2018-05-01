@@ -2,6 +2,7 @@
 let map, data;
 
 /**
+ * Oppgave 2
  * Funksjon som henter JSON fra gitt url
  * JSON-dokumentet tolkes og returneres til callback-funksjon
  */
@@ -88,7 +89,8 @@ function triggerMarkerClick(id) {
   google.maps.event.trigger(targetMarker, 'click');
 }
 
-// Funksjon som regner ut avstand mellom to koordinater ved hjelp av Pytagoras
+
+// Oppgave 7. Funksjon som regner ut avstand mellom to koordinater ved hjelp av Pytagoras
 function calculateDistance(c1, c2) {
   let lat = Math.abs(c1.latitude - c2.latitude);
   let lng = Math.abs(c1.longitude - c2.longitude);

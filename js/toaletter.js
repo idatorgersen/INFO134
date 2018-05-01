@@ -1,3 +1,5 @@
+//Oppgave 3, 5
+
 window.onload = function() {
   // Kaller på getJSON i scripts.js for å hente datasett "dokart"
   getJSON("https://hotell.difi.no/api/json/bergen/dokart?", function(response) {

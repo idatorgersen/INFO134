@@ -1,3 +1,5 @@
+//Oppgave 6
+
 window.onload = function() {
   // Kaller på getJSON i scripts.js for å hente datasett "lekeplasser"
   getJSON("https://hotell.difi.no/api/json/bergen/lekeplasser?", function(response) {
@@ -5,7 +7,7 @@ window.onload = function() {
     data.forEach(function(item) {
       item.visible = true;
     });
-    
+
     updateMarkers();
   })
 }

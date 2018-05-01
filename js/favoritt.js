@@ -1,3 +1,6 @@
+//Oppgave 8, 9
+
+
 // Variabler som tar vare på datasettene som brukes på favoritt-siden
 let lekeplasser, toaletter;
 
@@ -15,7 +18,7 @@ window.onload = function() {
       toaletter.forEach(function(item) {
         item.visible = true;
       });
-      
+
       createOptions();
     });
   });
