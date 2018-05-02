@@ -48,7 +48,7 @@ function createOptions() {
     closestLekeplasser = lekeplasser.slice(0, 5);
     closestLekeplasser.forEach(function(l) {
       let infoContent = "<b>" + l.navn + "</b>";
-      addMarker(l, {label: l.id, infowindow: new google.maps.InfoWindow({ content: infoContent })});
+      addMarker(l, {infowindow: new google.maps.InfoWindow({ content: infoContent })});
     });
 
     listPositions(closestLekeplasser);
