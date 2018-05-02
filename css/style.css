@@ -195,7 +195,7 @@ table{
   text-align: center;
 }
 
-/* Styling av aria-label/merkelapp til listene */
+/* Styling av aria-label/merkelapp knyttet til listene */
 ul:before, ol:before{
     content:attr(aria-label);
     font-style: italic;
@@ -231,6 +231,14 @@ ul:before, ol:before{
   .main {
     flex-direction: column;
     justify-content: space-between;
+  }
+  #introside{
+    font-size: 14px;
+    padding-left: 0;
+  }
+  /* tekststørrelse i index.html */
+  .intro{
+    font-size: 14px;
   }
   aside#kart{
       width:100%;
