@@ -31,10 +31,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-aside .intro{
-  padding: 30px;
-  font-size: 20px;
-}
+
 #logo {
   color: white;
   font-family: Times;
@@ -44,7 +41,15 @@ aside .intro{
 h2, h3 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #005580;
+  -webkit-margin-after: 0em;
+
 }
+#introside{
+  padding-left: 30px;
+  font-size: 20px;
+  margin-bottom:0;
+}
+
 .intro{
   font-size: 25px;
 }
