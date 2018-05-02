@@ -19,7 +19,6 @@ body{
   z-index: 1;
 }
 
-
 header {
   min-height: 50px;
   padding: 0 15px;
@@ -32,7 +31,10 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+aside .intro{
+  padding: 30px;
+  font-size: 20px;
+}
 #logo {
   color: white;
   font-family: Times;
@@ -41,6 +43,15 @@ header {
 
 h2, h3 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #005580;
+}
+.intro{
+  font-size: 25px;
+}
+.intro h2{
+  font-size: 35px;
+}
+.intro a{
   color: #005580;
 }
 
