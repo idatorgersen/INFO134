@@ -19,6 +19,7 @@ body{
   z-index: 1;
 }
 
+
 header {
   min-height: 50px;
   padding: 0 15px;
@@ -68,6 +69,8 @@ nav {
   display: flex;
   flex-flow: row wrap;
   flex-direction: row;
+  overflow: hidden;
+
 }
 
 a {
@@ -159,7 +162,7 @@ ul:before, ol:before{
     font-style: italic;
     /*margin-left:-15px;*/
 }
-.topnav .icon {
+ .icon {
   display: none;
 }
 
@@ -186,58 +189,31 @@ ul:before, ol:before{
 
 /* Mobil */
 @media all and (max-width: 500px){
-  nav{
-    justify-content: space-around;
-    flex-direction: column;
-    width: 100%;
-
-  }
-  nav>a {
-    padding-top:5px;
-    padding-bottom: 5px;
-  }
-
-  nav a:hover{
-    background-color: black;
-    color: white;
-  }
-  .top-bar {
-    flex-direction: column;
-  }
   .main {
     flex-direction: column;
     justify-content: space-between;
   }
-  header{
-    align-items:right;
-    padding: 10px;
-    width:100%;
-    min-height:30px;
-  }
   aside#kart{
       width:100%;
     }
-
-  .topnav a:not(:first-child) {
+  header{
+    min-height:30px;
+    padding: 10px;
+  }
+  .icon {
+     display: block;
+   }
+  .topnav{
+    display:flex;
+    flex-direction: column;
+  }
+  .topnav a:not(:first-child){
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
-    padding: 0;
-  }
-  .topnav a:hover.icon{
-    background: none;
-  }
-  .topnav.responsive .icon {
-    position: relative;
-  }
-  .topnav.responsive a {
+  .topnav.responsive a{
     display: block;
   }
-
   #current{
     border-bottom:0px;
   }
-
 }

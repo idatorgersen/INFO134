@@ -27,6 +27,6 @@ header.flex, .main {
 /* Mobil */
 @media all and (max-width: 500px){
   header.flex, nav.flex, .main{
-    flec-direction:column;
+    flex-direction:column;
   }
 }
