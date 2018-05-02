@@ -73,7 +73,6 @@ function search() {
  * param: filter  objekt som inneholder søkeparametre fra html-form
  */
 function toiletFilter(filter) {
-  console.log(filter);
   let today = new Date().getDay();
   if(today == 0) {
     today = "tid_sondag";
@@ -114,8 +113,6 @@ function toiletFilter(filter) {
 // Funksjon som skal filtrere basert på tekst-input ved hjelp av regex
 function hurtigsok() {
   let searchText = document.getElementById("searchField").value.toLowerCase();
-  /*let captureStart = /^(.*?)(?=$| [a-zæøå]+:)/g;
-  let captureParams = /(\b([a-zæøå]+):([a-zæøå]+)\b)+/g;*/
   let matchStart = searchText.match(/^(.*?)(?=$| [0-9a-zæøå]+:)/g);
   let matchParams = searchText.match(/(\b([a-zæøå]+):([0-9a-zæøå]+)\b)+/g);
 
@@ -149,8 +146,4 @@ function hurtigsok() {
   toiletFilter(params);
   updateMarkers();
   listPositions(data);
-
-  /*console.log(searchText);
-  console.log(matchStart);
-  console.log(matchParams);*/
 }

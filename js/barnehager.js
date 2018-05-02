@@ -41,6 +41,5 @@ function refresh(){
     }
     return true;
   });
-  console.log(liste);
   listPositions(liste);
 }
