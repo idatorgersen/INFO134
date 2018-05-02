@@ -26,9 +26,7 @@ header.flex, nav.flex, .main {
 }
 /* Mobil */
 @media all and (max-width: 500px){
-  header.flex, nav.flex{
-    flex-direction: column;
-    margin-bottom: 3px;
-    margin-top: 5px;
+  header.flex, nav.flex, .main{
+    flec-direction:column;
   }
 }

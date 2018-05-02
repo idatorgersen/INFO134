@@ -82,15 +82,16 @@ header a:link, header a:visited {
 nav a:hover {
   color: black;
 }
+
 #current {
     border-bottom: 2px solid #fff;
 }
+
 footer {
   height: 60px;
   text-align: center;
   justify-content: space-around;
 }
-
 
 #posList a:hover{
   color: #BC1010;
@@ -158,19 +159,23 @@ ul:before, ol:before{
     font-style: italic;
     /*margin-left:-15px;*/
 }
+.topnav .icon {
+  display: none;
+}
+
 
 /* Nettbrett */
 @media all and (max-width: 800px){
   nav {
     justify-content: space-around;
     min-height: 20px;
-    min-width: 250px;
+    min-width: 300px;
+    /*line-height: 180%;*/
   }
-
   header{
-    align-items: center;
     flex-direction: column;
-    min-height: 50px;
+    min-height: 90px;
+    line-height:200%;
   }
 
   #logo{
@@ -185,6 +190,7 @@ ul:before, ol:before{
     justify-content: space-around;
     flex-direction: column;
     width: 100%;
+
   }
   nav>a {
     padding-top:5px;
@@ -194,22 +200,44 @@ ul:before, ol:before{
   nav a:hover{
     background-color: black;
     color: white;
-    width:100%;
   }
-
+  .top-bar {
+    flex-direction: column;
+  }
   .main {
     flex-direction: column;
-    margin-top: 30px;
+    justify-content: space-between;
   }
-
-  aside#kart{
+  header{
+    align-items:right;
+    padding: 10px;
     width:100%;
+    min-height:30px;
   }
-  #current {
-      border-bottom: 0px solid #fff;
+  aside#kart{
+      width:100%;
+    }
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 0;
+  }
+  .topnav a:hover.icon{
+    background: none;
+  }
+  .topnav.responsive .icon {
+    position: relative;
+  }
+  .topnav.responsive a {
+    display: block;
   }
 
-  .top-bar {
-    position: absolute;
+  #current{
+    border-bottom:0px;
   }
+
 }

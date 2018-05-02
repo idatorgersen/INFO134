@@ -97,3 +97,12 @@ function calculateDistance(c1, c2) {
 
   return Math.sqrt((lat * lat) + (lng * lng));
 }
+
+function burger() {
+    var burger = document.getElementById("nav");
+    if (burger.className === "topnav") {
+        burger.className += " responsive";
+    } else {
+        burger.className = "topnav";
+    }
+}
