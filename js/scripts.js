@@ -84,7 +84,7 @@ function listPositions(positions) {
  */
 function triggerMarkerClick(id) {
   let targetMarker = map.markers.find(function(marker) {
-    if(marker.label == id) return marker;
+    if(marker.title == id) return marker;
   });
   google.maps.event.trigger(targetMarker, 'click');
 }

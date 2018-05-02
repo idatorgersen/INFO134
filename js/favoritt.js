@@ -43,11 +43,11 @@ function createOptions() {
     lekeplasser.sort(function(a, b) {
       return calculateDistance(a, t) - calculateDistance(b, t);
     });
-    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', infowindow: new google.maps.InfoWindow({ content: "" })});
+    addMarker(t, {icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', infowindow: new google.maps.InfoWindow({ content: t.adresse })});
 
     closestLekeplasser = lekeplasser.slice(0, 5);
     closestLekeplasser.forEach(function(l) {
-      let infoContent = "<b>" + l.navn + "</b>";
+      let infoContent = l.navn;
       addMarker(l, {infowindow: new google.maps.InfoWindow({ content: infoContent })});
     });
 
