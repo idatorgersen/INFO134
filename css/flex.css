@@ -10,7 +10,7 @@ html, body {
   flex-direction: column;
 }
 
-header.flex, nav.flex, .main {
+header.flex, .main {
   flex-direction: row;
 }
 
