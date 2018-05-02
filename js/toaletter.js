@@ -112,8 +112,14 @@ function toiletFilter(filter) {
 
 // Funksjon som skal filtrere basert på tekst-input ved hjelp av regex
 function hurtigsok() {
-    let regex = /(.*?)( kjønn:(mann|kvinne)| rullestol:(ja|nei)| åpen:((ja|nei)|(\d\d:\d\d))| stellerom:(ja|nei)| makspris:(\d+)| gratis:(ja|nei))/;
-    var searchText = document.getElementById("searchField").value;
+  var searchText = document.getElementById("searchField").value;
+  var captureStart = /(^.+?)(?=\w+:\w+)/g;
+  var captureParams = /(\b([a-zæøå]+):([a-zæøå]+)\b)/g;
 
-    console.log(searchText.match(regex));
+  var matchStart = searchText.match(captureStart);
+  var matchParams = searchText.match(captureParams);
+
+  console.log(searchText);
+  console.log(matchStart);
+  console.log(matchParams);
 }
