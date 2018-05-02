@@ -12,6 +12,7 @@ body{
   line-height: 1.2;
 }
 
+/* Den fargede linjen på toppen av siden */
 .top-bar {
   background-color:  #005580/*#5f5f5f*/;
   position: fixed;
@@ -19,6 +20,7 @@ body{
   z-index: 1;
 }
 
+/* Header, inneholder meny og tittel */
 header {
   min-height: 50px;
   padding: 0 15px;
@@ -32,39 +34,44 @@ header {
   align-items: center;
 }
 
+/* Sidens tittel/logo, vises øverst til venstre */
 #logo {
   color: white;
   font-family: Times;
   font-size: 20px;
 }
 
+/* Styling av overskrifter*/
 h2, h3 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #005580;
   -webkit-margin-after: 0em;
 
 }
+
+/* Unik styling av sidebaren i index.html */
 #introside{
   padding-left: 30px;
   font-size: 20px;
   margin-bottom:0;
 }
 
+/* tekststørrelse i index.html */
 .intro{
   font-size: 25px;
 }
+/* Overskrift forside */
 .intro h2{
   font-size: 35px;
 }
+/* Link i tekst på forside */
 .intro a{
   color: #005580;
 }
 
+/* Den gjennomsiktige ruten som rommer alt hovedinnhold på siden */
 .center {
   background: rgba(255,255,255,0.85);
-  /*background-color: white;*/
-  /*box-shadow: 5px 5px 20px grey;*/
-
   padding: 20px;
 
   margin-top: 100px;
@@ -72,11 +79,13 @@ h2, h3 {
   border-radius: 4px;
 }
 
+/* Spesifiserer størrelse på kart for å gjøre kartene responsive */
 #map {
   width:100%;
   height:500px;
 }
 
+/* Navigasjonsmeny */
 nav {
   width: 40%;
   min-width: 600px;
@@ -86,22 +95,25 @@ nav {
   flex-flow: row wrap;
   flex-direction: row;
   overflow: hidden;
-
 }
 
+/* Linker */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* Linker i header */
 header a:link, header a:visited {
   color: white;
 }
 
+/* Hover på linker i Navigasjonsmeny*/
 nav a:hover {
   color: black;
 }
 
+/* Viser en linje under linken i menyen på siden man er inne på */
 #current {
     border-bottom: 2px solid #fff;
 }
@@ -112,24 +124,29 @@ footer {
   justify-content: space-around;
 }
 
+/* Styling for linker i lister med steder fra datasett, rød skriftfarge@hover*/
 #posList a:hover{
   color: #BC1010;
   }
 
+/* Venstre/hovedkolonne på siden */
 .main  {
   justify-content: space-between;
 }
 
+/* Spesifikk styling for sider der kart er i sidebaren */
 aside#kart{
   flex-direction: column;
   display: block;
   width:500px;
 }
 
+/* Angir full bredde, ingen sidebar */
 article#wide{
   width: 100%;
 }
 
+/* Styling for textinput/søkefelt */
 .toptext input[type=text] {
     padding: 6px;
     margin-top: 8px;
@@ -137,6 +154,8 @@ article#wide{
     font-size: 14px;
     appearance: searchfield;
 }
+
+/* Knapp for avansert søk */
 .advancedButton {
     border: none;
     background-color: #005580;
@@ -145,6 +164,7 @@ article#wide{
     font-size: 14px;
 }
 
+/* Søkeknapp */
 .searchButton{
   border: none;
   background-color: #005580;
@@ -154,6 +174,7 @@ article#wide{
   margin-top: 10px;
 }
 
+/* Skjuler avanserte søkealternativ før brukeren trykker på avansert søk */
 #search {
   display:none;
 }
@@ -163,6 +184,7 @@ table{
   font-size: 13px;
 }
 
+/* Søkefelt for tid i avansert søk*/
 .time-input {
   appearance: searchfield;
   width: 40px;
@@ -173,11 +195,12 @@ table{
   text-align: center;
 }
 
+/* Styling av aria-label/merkelapp til listene */
 ul:before, ol:before{
     content:attr(aria-label);
     font-style: italic;
-    /*margin-left:-15px;*/
 }
+/* Skjuler burgermeny-knapp når brukeren er på laptop/nettbrett */
  .icon {
   display: none;
 }
