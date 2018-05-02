@@ -113,7 +113,7 @@ function toiletFilter(filter) {
 // Funksjon som skal filtrere basert på tekst-input ved hjelp av regex
 function hurtigsok() {
   var searchText = document.getElementById("searchField").value;
-  var captureStart = /^(.*?)(?= [a-zæøå]+:)/g;
+  var captureStart = /^(.*?)(?=$| [a-zæøå]+:)/g;
   var captureParams = /(\b([a-zæøå]+):([a-zæøå]+)\b)+/g;
 
   var matchStart = searchText.match(captureStart);
