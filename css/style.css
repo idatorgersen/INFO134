@@ -153,6 +153,7 @@ article#wide{
     margin-right: 16px;
     font-size: 14px;
     appearance: searchfield;
+    width: 100%;
 }
 
 /* Knapp for avansert søk */
@@ -195,6 +196,11 @@ table{
   -webkit-appearance: textfield;
   text-align: center;
 }
+/* Bredde på skjema på kontaktsiden*/
+input[type=text], textarea {
+  width: 40%;
+  padding: 10px;
+}
 
 /* Styling av aria-label/merkelapp knyttet til listene */
 ul:before, ol:before{
@@ -226,6 +232,11 @@ ul:before, ol:before{
 /* Plassering av logo/tittel (byguiden) på nettbrett. */
   #logo{
     margin-left: 20px;
+  }
+
+  /* Bredde på skjema på kontaktsiden*/
+  input[type=text], textarea {
+    width: 90%;
   }
 
 }
@@ -276,5 +287,13 @@ ul:before, ol:before{
   /* Fjerner linjen under current på mobilmeny */
   #current{
     border-bottom:0px;
+  }
+  /* Responsive tekstfelt i kontakt.html*/
+  input[type=text], textarea {
+    width: 90%;
+  }
+  /* Bredde for number-input, brukes i avansert søk på toaletter */
+  input[type=number]{
+    width: 30px;
   }
 }
