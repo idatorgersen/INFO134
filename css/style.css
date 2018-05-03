@@ -153,7 +153,7 @@ article#wide{
     margin-right: 16px;
     font-size: 14px;
     appearance: searchfield;
-    width: 100%;
+    width: 90%;
 }
 
 /* Knapp for avansert søk */
@@ -296,4 +296,5 @@ ul:before, ol:before{
   input[type=number]{
     width: 30px;
   }
+
 }

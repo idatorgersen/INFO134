@@ -8,7 +8,7 @@ window.onload = function() {
 }
 
 //Setter eier lik value og kjører refresh()
-function eier(value) {
+function eierform(value){
   eier = value;
   refresh();
 }
