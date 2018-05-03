@@ -41,5 +41,10 @@ function refresh(){
     }
     return true;
   });
+  //Sjekker om det finnes barnehager som brukeren søker etter
+  if(liste.length == 0){
+    document.getElementById('posList').innerHTML = "Ingen barnehager matcher ditt søk";
+  }else{
   listPositions(liste);
+}
 }

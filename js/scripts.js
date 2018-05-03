@@ -98,6 +98,7 @@ function calculateDistance(c1, c2) {
   return Math.sqrt((lat * lat) + (lng * lng));
 }
 
+// Funksjon for burgermeny. Legger til classname responsive på topnav, dette brukes videre i css
 function burger() {
     var burger = document.getElementById("nav");
     if (burger.className === "topnav") {

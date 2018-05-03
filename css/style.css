@@ -179,6 +179,7 @@ article#wide{
   display:none;
 }
 
+/* Tabellen for avansert søk */
 table{
   width: 100%;
   font-size: 13px;
@@ -228,10 +229,12 @@ ul:before, ol:before{
 
 /* Mobil */
 @media all and (max-width: 500px){
+/* Endrer flex-direction til column i main på mobil */
   .main {
     flex-direction: column;
     justify-content: space-between;
   }
+
   #introside{
     font-size: 14px;
     padding-left: 0;
@@ -254,12 +257,14 @@ ul:before, ol:before{
     display:flex;
     flex-direction: column;
   }
+  /* Skjuler menyen, utenom det første elementet som er burger-ikonet */
   .topnav a:not(:first-child){
     display: none;
   }
   .topnav.responsive a{
     display: block;
   }
+  /* Fjerner linjen under current på mobilmeny */
   #current{
     border-bottom:0px;
   }
