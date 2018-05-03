@@ -209,18 +209,21 @@ ul:before, ol:before{
 
 /* Nettbrett */
 @media all and (max-width: 800px){
+  /* Organisering av navigasjonsmeny på nettbrett*/
   nav {
     justify-content: space-around;
     min-height: 20px;
     min-width: 300px;
-    /*line-height: 180%;*/
   }
+
+  /* Header-elementene organiseres i kolonne fremfor rad på nettbrett/mindre skjermer */
   header{
     flex-direction: column;
     min-height: 90px;
     line-height:200%;
   }
 
+/* Plassering av logo/tittel (byguiden) på nettbrett. */
   #logo{
     margin-left: 20px;
   }
@@ -234,7 +237,7 @@ ul:before, ol:before{
     flex-direction: column;
     justify-content: space-between;
   }
-
+/* Skriftstørrelse i index.html */
   #introside{
     font-size: 14px;
     padding-left: 0;
@@ -243,6 +246,7 @@ ul:before, ol:before{
   .intro{
     font-size: 14px;
   }
+  /*100% bredde for kart i sidebaren på mobil, kartet ligger da under hovedinnhold*/
   aside#kart{
       width:100%;
     }
@@ -250,9 +254,11 @@ ul:before, ol:before{
     min-height:30px;
     padding: 10px;
   }
+  /* Burger-ikonet vises på mobil */
   .icon {
      display: block;
    }
+   /* Navigasjonsmeny på mobil, elementene organiseres under hverandre */
   .topnav{
     display:flex;
     flex-direction: column;
@@ -261,6 +267,9 @@ ul:before, ol:before{
   .topnav a:not(:first-child){
     display: none;
   }
+  /* .topnav har også fått classname .responsive ved css, Navigasjonsmeny
+  * vises når burgermenyen klikkes på.
+  */
   .topnav.responsive a{
     display: block;
   }
