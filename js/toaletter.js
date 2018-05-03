@@ -116,34 +116,50 @@ function hurtigsok() {
   let matchStart = searchText.match(/^(.*?)(?=$| [0-9a-zæøå]+:)/g);
   let matchParams = searchText.match(/(\b([a-zæøå]+):([0-9a-zæøå]+)\b)+/g);
 
-  let params = {};
-  matchParams.forEach(function(p) {
-    p = p.split(":");
-    if(p[0] == "kjønn") {
-      switch (p[1]) {
-        case "mann":
-        case "menn":
-        case "male":
-          params.herre = 1;
-          break;
-        case "kvinne":
-        case "dame":
-        case "female":
-          params.kvinne = 1;
-          break;
-        default:
-          break;
-      }
-    } else {
-      if(p[1] == "ja" || p[1] == "nei") {
-        params[p[0]] = (p[1] == "ja") ? 1 : 0;
+  if(matchParams) {
+    let params = {};
+    matchParams.forEach(function(p) {
+      p = p.split(":");
+      if(p[0] == "kjønn") {
+        switch (p[1]) {
+          case "mann":
+          case "menn":
+          case "male":
+            params.herre = 1;
+            break;
+          case "kvinne":
+          case "dame":
+          case "female":
+            params.kvinne = 1;
+            break;
+          default:
+            break;
+        }
       } else {
-        params[p[0]] = p[1];
+        if(p[1] == "ja" || p[1] == "nei") {
+          params[p[0]] = (p[1] == "ja") ? 1 : 0;
+        } else {
+          params[p[0]] = p[1];
+        }
       }
-    }
-  });
+    });
 
-  toiletFilter(params);
+    toiletFilter(params);
+  } else {
+    toiletFilter({});
+  }
+
+  if(matchStart) {
+    matchStart = matchStart[0].split(" ");
+    data.forEach(function(t) {
+      if(t.visible) {
+        matchStart.forEach(function(w) {
+          t.visible = t.adresse.toLowerCase().match(w) || t.plassering.toLowerCase().match(w);
+        });
+      }
+    });
+  }
+
   updateMarkers();
   listPositions(data);
 }
